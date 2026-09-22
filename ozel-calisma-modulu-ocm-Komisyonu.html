@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Özel Çalışma Modülü (ÖÇM) Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            ÖZEL ÇALIŞMA MODÜLÜ (ÖÇM) KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Özel Çalışma Modülü (ÖÇM) Komisyonu, fakültemizde öğrencilerin ilgi duydukları alanlarda derinlemesine bilgi ve beceri kazanmalarını amaçlayan, 
+    akademik bir öğretim üyesi yönetiminde bilimsel araştırma planlamaları, uygulamaları ve raporlamalarını kapsayan eğitim etkinliklerini düzenleyen kuruldur. 
+    Komisyon, eğitim programının kalitesini artırmak ve öğrencilere bireysel çalışma imkanı sağlamak için çalışır.</p>
+    <p><b>Amaç:</b> Tıp eğitiminde çekirdek müfredatın dışında, öğrencilerin merak ettikleri konularda saha veya klinik araştırmalar yapmalarını, 
+        bilimsel yöntemleri öğrenmelerini ve sunmalarını sağlamaktır.</p>
+        <p><b>Görevleri:</b></p>
+        <li>ÖÇM konularını belirlemek ve onaylamak.</li><br>
+        <li>Öğrencilerin başvuru ve atama süreçlerini yönetmek.</li><br>
+        <li>Modül sonuçlarını ve öğrenci raporlarını değerlendirmek.</li><br>
+        <li>Komisyon yönergesine uygun olarak, genellikle her yarıyılda en az bir kez toplanarak çalışmaları raporlamak.</li><br>
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+        ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>ÖZEL ÇALIŞMA MODÜLÜ (ÖÇM) KOMİSYONU</u></h3>
+<li>Doç. Dr. Saadet Özen AKARCA DİZAKAR (Başkan)</li><br>
+<li>Prof. Dr. Ayşe Canan YAZICI GÜVERCİN (Üye)</li><br>
+<li>Prof. Dr. Betil ÖZHAK (Üye)</li><br>
+<li>Prof. Dr. Bedile İrem TİFTİKCİOĞLU (Üye)</li><br>
+<li>Prof. Dr. Bayram ÇOLAK (Üye)</li><br>
+<li>Doç. Dr. Fatma AKGÜL (Üye)</li><br>
+<li>Doç. Dr. Emre KARSLI (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Levent ELMAS (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Hayriye Dilek AKDOĞAN (Üye)</li><br>
+<li>Dönem I Temsilcisi (Üye)</li><br>
+<li>Dönem II Temsilcisi (Üye)</li><br>
+<li>Dönem III Temsilcisi (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p><b>Temel Çalışma İlkeleri ve Görevleri</b></p>
+<li><b>Planlama ve Yapılandırma:</b> ÖÇM modüllerinin amaçlarını, hedeflerini, içeriklerini ve çalışma takvimini her eğitim yılı başında belirlemek.</li><br>
+<li><b>Danışmanlık ve Eşgüdüm:</b> Öğrencilerin öğretim üyeleri yönetiminde yürüttükleri bilimsel araştırma veya klinik çalışmaları koordine etmek, akademik danışmanlık süreçlerini denetlemek.</li><br>
+<li><b>Onay ve Denetim:</b> Öğrenciler tarafından sunulan çalışma projelerini onaylamak, modül süresince takibini yapmak ve raporlanan sonuçları değerlendirmek.</li><br>
+<li><b>İlgi ve Yeteneğe Dayalı Eğitim:</b> Öğrencilerin kendi ilgi alanlarına göre modül seçmelerine olanak tanıyan, bireysel öğrenmeyi teşvik eden bir ortam sağlamak.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/%C3%96ZEL_%C3%87ALI%C5%9EMA_MOD%C3%9CL%C3%9C_USUL_VE_ESAS.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<!-- ETKİNLİKLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content='
+
+<style>
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
+
+.event-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.event-body {
+    padding: 18px;
+}
+
+.event-title {
+    font-weight: 600;
+    color: #025860;
+}
+
+.event-date {
+    font-size: 0.85em;
+    color: #00a5b5;
+    margin: 6px 0;
+}
+</style>
+
+<h2>Etkinlikler</h2>
+
+<div class="event-container">
+
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1456/ocm-2026-2027-egitim-ogretim-yili-toplantisi">
+<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/%C3%96%C3%87M%20Toplant%C4%B1%2009.06.2026/%C3%96%C3%87M_Toplt.jpeg">
+<div class="event-body">
+<div class="event-title" style="color:blue">ÖÇM 2026-2027 Eğitim-Öğretim Yılı Toplantısı</div>
+<div class="event-date" style="color:blue">09 HAziran 2026</div>
+<div  style="color:blue">ÖÇM 2026-2027 Eğitim-Öğretim Yılı hazırlıkları kapsamında düzenlenen toplantı…</div></a>
+</div>
+</div>
+
+
+
+</div>
+
+'>
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Özel Çalışma Modülü (ÖÇM) Komisyonu Sekreteryası</h3>
+<p>Ümit Doğan</p>
+<p><b>E-posta:</b> umit.dogan@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11310</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

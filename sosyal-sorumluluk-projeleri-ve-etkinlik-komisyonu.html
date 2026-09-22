@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            SOSYAL SORUMLULUK PROJELERİ VE ETKİNLİK KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu, öğrencilerin toplumsal gereksinimlere yönelik projeler geliştirmesini, etik değerlere bağlı, 
+    çevre bilincine sahip ve aktif bireyler olarak yetişmelerini amaçlayan akademik bir kuruldur. Komisyon, projeleri planlama, destekleme, 
+    etik onay süreçlerini yönetme ve çıktıları değerlendirme çalışma ilkeleriyle faaliyet gösterir.</p>
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>SOSYAL SORUMLULUK PROJELERİ VE ETKİNLİK KOMİSYONU</u></h3>
+<li>Prof. Dr. Özgür OLUKMAN (Başkan)</li><br>
+<li>Prof. Dr. Bedile İrem TİFTİKÇİOĞLU (Üye)</li><br>
+<li>Prof. Dr. Filiz Meryem SERTPOYRAZ (Üye)</li><br>
+<li>Doç. Dr. Mustafa Ozan HORSANALI (Üye)</li><br>
+<li>Doç. Dr. Ayşe Rabia KANBAK (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Levent ELMAS (Üye)</li><br>
+<li>Dönem I Temsilcisi (Üye)</li><br>
+<li>Dönem II Temsilcisi (Üye)</li><br>
+<li>Dönem III Temsilcisi (Üye)</li><br>
+<li>Dönem IV Temsilcisi (Üye)</li><br>
+<li>Dönem V Temsilcisi (Üye)</li><br>
+<li>Dönem VI Temsilcisi (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p><b>Temel Çalışma İlkeleri</b></p>
+<li><b></b> Fakültenin eğitim programı, misyonu ve vizyonu doğrultusunda toplumsal fayda sağlayan, koruyucu sağlık hizmetlerine yönelik veya eğitim içerikli 
+    projeleri teşvik etmek.</li><br>
+<li><b>Proje Yönetimi ve Destek:</b> Öğrenci ve öğretim üyeleri tarafından önerilen projelerin başvuru, onay, uygulama ve sonuçlandırma süreçlerini yönetmek.</li><br>
+<li><b>Etik ve Mevzuat:</b> Projelerin etik sorumluluklar, insan hakları ve ilgili mevzuat çerçevesinde yürütülmesini sağlamak.</li><br>
+<li><b>Toplumsal Katkı ve Farkındalık:</b> Yaşlılar, çocuklar, engelliler gibi gruplara yönelik veya çevre sağlığı gibi konularda toplumsal bilinç oluşturacak etkinlikler 
+    düzenlemek.</li><br>
+<li><b>Değerlendirme:</b> Projelerin başarısını, öğrencilerin bireysel ve sosyal gelişimlerine katkısını analiz etmek</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/SOSYAL_SORUMLULUK_PROJELER%C4%B0_VE_E.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<!-- ETKİNLİKLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content='
+
+<style>
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
+
+.event-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.event-body {
+    padding: 18px;
+}
+
+.event-title {
+    font-weight: 600;
+    color: #025860;
+}
+
+.event-date {
+    font-size: 0.85em;
+    color: #00a5b5;
+    margin: 6px 0;
+}
+</style>
+
+<h2>Etkinlikler</h2>
+
+<div class="event-container">
+
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/Duyurular/5821/bakircay-talks-kok-hucre-programlari-ve-norogelisimsel-bozukluklarin-hucresel-temelleri">
+<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/Prof_Dr.%20%C3%96mer%20ali%20bayraktar.png">
+<div class="event-body">
+<div class="event-title" style="color:blue">Bakırçay Talks: Kök Hücre Programları ve Nörogelişimsel Bozuklukların Hücresel Temelleri</div>
+<div class="event-date" style="color:blue">04 Haziran 2026</div>
+<div style="color:blue"></div></a>
+</div>
+</div>
+
+</div>
+
+'>
+📅 Etkinlikler
+</button>
+
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu Sekreteryası</h3>
+<p>Tuğçe Yılmaz</p>
+<p><b>E-posta:</b> tugce.yilmaz@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11602</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

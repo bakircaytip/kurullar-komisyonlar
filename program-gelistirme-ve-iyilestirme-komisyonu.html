@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Program Geliştirme ve İyileştirme Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            PROGRAM GELİŞTİRME VE İYİLEŞTİRME KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Program Geliştirme ve İyileştirme Komisyonu, fakültemizde öğretim programlarını sürekli olarak güncelleyen, ihtiyaç analizlerine göre yenileyen
+     ve kalite akreditasyon süreçlerini yöneten akademik kurullardır. Eğitim hedeflerini, içeriği ve ölçme-değerlendirme yöntemlerini iyileştirerek eğitimin 
+     kalitesini artırmayı amaçlarlar.</p>
+     <p><b>Komisyonun Temel Görevleri ve Amacı:</b></p>
+     <li><b>İhtiyaç Analizi:</b> Paydaşlardan (öğrenci, öğretim üyesi, mezun) gelen geri bildirimler doğrultusunda eğitim programının eksik yönlerini belirler.</li><br>
+     <li><b>Programı Güncelleme:</b> Eğitim programının hedeflerini, içeriğini, öğretim yöntemlerini ve ölçme-değerlendirme yöntemlerini çağdaş gelişmeler doğrultusunda günceller.</li><br>
+     <li><b>Akreditasyon Çalışmaları:</b> Kurumun ulusal veya uluslararası standartlara ulaşması için gerekli program iyileştirmelerini yapar.</li><br>
+     <li><b>Raporlama ve İzleme:</b> Yapılan çalışmaların sonuçlarını, alınan kararları ve önerileri bir rapor halinde ilgili dekanlığa sunar.</li><br>
+     <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+     ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>PROGRAM GELİŞTİRME VE İYİLEŞTİRME KOMİSYONU</u></h3>
+<li>Dr. Öğr. Üyesi Hayriye Dilek AKDOĞAN (Başkan)</li><br>
+<li>Prof. Dr. Bedile İrem TİFTİKÇİOĞLU (Üye)</li><br>
+<li>Prof. Dr. Teslime AYAZ (Üye)</li><br>
+<li>Prof. Dr. Semiha BAHÇECİ ERDEM (Üye)</li><br>
+<li>Prof. Dr. Hayriye GÖNÜLLÜ (Üye)</li><br>
+<li>Prof. Dr. Ceylan AYADA (Üye)</li><br>
+<li>Prof. Dr. Filiz Meryem SERTPOYRAZ (Üye)</li><br>
+<li>Doç. Dr. Serkan ÖNER (Üye)</li><br>
+<li>Doç. Dr. Leman İNANAÇ (Üye)</li><br>
+<li>Doç. Dr. Saadet Özen AKARCA DİZAKAR (Üye)</li><br>
+<li>Doç. Dr. Reyhan YİŞ (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Levent ELMAS (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Pelin KOCA (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Elif KESKİN ARSLAN (Üye)</li><br>
+<li>Dönem I Temsilcisi (Üye)</li><br>
+<li>Dönem II Temsilcisi (Üye)</li><br>
+<li>Dönem III Temsilcisi (Üye)</li><br>
+<li>Dönem IV Temsilcisi (Üye)</li><br>
+<li>Dönem V Temsilcisi (Üye)</li><br>
+<li>Dönem VI Temsilcisi (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p><b>Temel Çalışma Esasları</b></p><br>
+<li><b>İhtiyaç Analizi Odaklılık:</b> Çalışmalar, toplumun, bireyin, sektörün ve konu alanının ihtiyaç ve beklentilerini belirleyen verilerin toplanmasıyla başlar.</li><br>
+<li><b>Dinamik Yapı:</b> Program geliştirme, programın dört temel ögesi olan hedef, içerik, eğitim durumları ve değerlendirme arasındaki dinamik ilişkiyi sürekli güncel tutar.</li><br>
+<li><b>Kanıta Dayalı İyileştirme:</b> Programdaki iyileştirmeler, eğitim-öğretim sürecinden elde edilen verilerin (öğrenci geri bildirimleri, sınav sonuçları vb.) analizine dayanır.</li><br>
+<li><b>Paydaş Katılımı:</b> Eğitim programlarının hazırlanması ve güncellenmesi sürecine öğretim elemanları, öğrenciler, mezunlar ve dış paydaşlar dahil edilir.</li><br>
+<p><b>Süreç ve Toplantı İlkeleri</b></p><br>
+<li><b>Planlı Toplantılar:</b> Komisyonlar, genellikle eğitim-öğretim yılı içinde belirli aralıklarla (örneğin en az dört kez) düzenli toplanır.</li><br>
+<li><b>Yönergeye Bağlılık:</b> Çalışmalar, kurumun belirlediği program geliştirme yönergesi ve çalışma esaslarına göre yürütülür.</li><br>
+<li><b>Alt Komisyonlarla İşbirliği:</b> İhtiyaç halinde alt kurullar veya çalışma grupları oluşturularak süreç alt bileşenlere (içerik, ölçme-değerlendirme vb.) bölünür.</li><br>
+<p><b>Program Geliştirme Aşamaları</b></p><br>
+<li><b>Hedef Belirleme:</b> Programın amaçları ve kazandırılacak davranışlar netleştirilir.</li><br>
+<li><b>İçerik Düzenleme:</b> İçerik, ardışık, sıralı ve esnek bir yaklaşımla yapılandırılır.</li><br>
+<li><b>Eğitim Durumları:</b> Öğrenme yaşantıları ve öğretim yöntemleri belirlenir.</li><br>
+<li><b>Değerlendirme:</b> Programın etkililiği ölçülür ve iyileştirme önerileri geliştirilir.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/PROGRAM_GEL%C4%B0%C5%9ET%C4%B0RME_VE_%C4%B0Y%C4%B0LE%C5%9ET%C4%B0RM.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Program Geliştirme ve İyileştirme Komisyonu Sekreteryası</h3>
+<p>Ümit Doğan</p>
+<p><b>E-posta:</b> umit.dogan@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11310</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

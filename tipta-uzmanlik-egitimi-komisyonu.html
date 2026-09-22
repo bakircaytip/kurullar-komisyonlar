@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tıpta Uzmanlık Eğitimi Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            TIPTA UZMANLIK EĞİTİMİ KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Tıpta Uzmanlık Eğitimi Komisyonu, fakültemizde ve İzmir Bakırçay Üniversitesi Çiğli Eğitim ve Araştırma Hastanesinde araştırma görevlilerinin 
+    (asistan doktor) uzmanlık eğitimi sürecini planlayan, yürüten ve denetleyen akademik ve idari yapıdır.</p>
+    <p><b>Tıpta Uzmanlık Eğitimi Komisyonunun Temel Görevleri</b></p>
+    <li><b>Eğitim Müfredatı:</b> Uzmanlık eğitim programlarını hazırlamak ve güncel tutmak.</li><br>
+    <li><b>Asistan Takibi:</b> Araştırma görevlilerinin eğitim sürelerini, rotasyonlarını ve karnelerini takip etmek.</li><br>
+    <li><b>Eğitim Denetimi:</b> Uzmanlık eğitiminin standartlara uygun olup olmadığını denetlemek.</li><br>
+    <li><b>Akreditasyon:</b> Eğitim kurumlarının tıbbi uzmanlık standartlarını karşılayıp karşılamadığını değerlendirmek.</li><br>
+    <li><b>Değerlendirme:</b> Yıllık asistan değerlendirme sınavları ve ara değerlendirmeler yapmak.</li><br>
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>TIPTA UZMANLIK EĞİTİMİ KOMİSYONU</u></h3>
+<li>Prof. Dr. Togay MÜDERRİS (Başkan)</li><br>
+<li>Prof. Dr. Cem TUĞMEN (Üye)</li><br>
+<li>Prof. Dr. Mehmet Hicri KÖSEOĞLU (Üye)</li><br>
+<li>Prof. Dr. Güneş ŞENOL (Üye)</li><br>
+<li>Doç. Dr. Hakan AYGÜN (Üye)</li><br>
+<li>Tıpta Uzmanlık Öğrencisi Dr. Doğan AYDIN (Tıbbi Biyokimya) (Üye)</li><br>
+<li>Tıpta Uzmanlık Öğrencisi Dr. Şuayip KORHAN (İç Hastalıkları) (Üye)</li><br>
+<li>Tıpta Uzmanlık Öğrencisi Dr. Oktay BAKIN (KBB) (Üye)</li><br>
+<li>Mezun Öğrenci Dr. Aziz KOCA (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="
+<p><b>Temel Görev ve Amaç İlkeleri</b></p>
+<li><b>Standartlaştırma:</b> Uzmanlık eğitiminin, Tıpta Uzmanlık Kurulu (TUK) tarafından belirlenen müfredat ve standartlara uygun olarak verilmesini sağlamak.</li><br>
+<li><b>Planlama ve Denetim:</b> Eğitim programlarını planlamak, yürütmek ve asistan eğitim süreçlerini düzenli olarak denetlemek.</li><br>
+<li><b>Kalite Geliştirme:</b>Kalite Geliştirme: Eğitim programlarını güncel bilimsel gelişmeler doğrultusunda revize etmek ve eğitim kalitesini artırmak.</li><br>
+<p><b>Eğitim Süreçlerinin Yönetimi</b></p>
+<li><b>Müfredat Uygulaması:</b> Çekirdek müfredatın anabilim dallarında uygulanmasını sağlamak ve takip etmek.</li><br>
+<li><b>Asistan Takibi:</b> Asistanların karne, tez ve rotasyon süreçlerini (uzmanlık tüzüğüne göre) takip etmek.</li><br>
+<li><b>Değerlendirme:</b> Eğitim programlarının etkinliğini ölçmek ve iyileştirici önlemler almak.</li><br>
+<p><b>Çalışma Usulü</b></p>
+<li><b>Periyodik Toplantı:</b> Önceden belirlenmiş aralıklarla (aylık, üç aylık vb.) toplanmak ve alınan kararları kayıt altına almak.</li><br>
+<li><b>Şeffaflık ve Belgelem:</b> Uzmanlık eğitimi ile ilgili tüm işlemleri mevzuata uygun olarak tutanak altına almak ve saklamak.</li><br>
+<li><b>Yönetmelik Uyumu:</b>Yönerge Uyumu: Çalışmalar, üniversite veya hastanenin Uzmanlık Eğitimi Yönergesi çerçevesinde yürütülür.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/TIPTA_UZMANLIK_E%C4%9E%C4%B0T%C4%B0M%C4%B0_KOM%C4%B0SYONU.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Tıpta Uzmanlık Eğitimi Komisyonu Sekreteryası</h3>
+<p>Derya Eryılmaz</p>
+<p><b>E-posta:</b> derya.eryilmaz@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11600</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Öz Değerlendirme ve Akreditasyon Kurulu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            ÖZ DEĞERLENDİRME VE AKREDİTASYON KURULU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Kurul Hakkında"
+data-content="<p>Öz Değerlendirme ve Akreditasyon Kurulu (ÖDAK), fakültemiz eğitim süreçlerinde kalite güvencesini sağlamak, akademik standartları 
+    korumak ve akreditasyon süreçlerini (öz değerlendirme raporu hazırlama vb.) yönetmekle görevli akademik bir kuruldur. Kurul, kurumun güçlü ve gelişime 
+    açık yönlerini belirleyerek eğitim kalitesini artırmayı hedefler.</p>
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Kurul Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>ÖZ DEĞERLENDİRME VE AKREDİTASYON KURULU</u></h3>
+<li>Prof. Dr. Ayşe Canan YAZICI GÜVERCİN (Başkan)</li><br>
+<li>Prof. Dr. M. Yekta ÖNCEL (Dekan)</li><br>
+<li>Prof. Dr. Zülal EKİNCİOĞLU ÖNER (Başkoordinatör)</li><br>
+<li>Prof. Dr. Hayriye GÖNÜLLÜ (Dekan Yardımcısı / Dönem VI Koordinatörü)</li><br>
+<li>Prof. Dr. Türker ÇAVUŞOĞLU (Dekan Yardımcısı)</li><br>
+<li>Prof. Dr. Güneş ŞENOL (Üye)</li><br>
+<li>Prof. Dr. Togay MÜDERRİS (Üye)</li><br>
+<li>Prof. Dr. Cem TUĞMEN (Üye)</li><br>
+<li>Prof. Dr. Teslime AYAZ (Üye)</li><br>
+<li>Prof. Dr. Özgür OLUKMAN (Üye)</li><br>
+<li>Prof. Dr. Bedile İrem TİFTİKCİOĞLU (Üye)</li><br>
+<li>Prof. Dr. Filiz Meryem SERTPOYRAZ (Üye)</li><br>
+<li>Prof. Dr. İbrahim KARACA (Üye)</li><br>
+<li>Prof. Dr. Ceylan AYADA (Üye)</li><br>
+<li>Prof. Dr. Semiha BAHÇECİ ERDEM (Üye)</li><br>
+<li>Doç. Dr. Seda ÇETİNKAYA KARABEKİR (Üye)</li><br>
+<li>Doç. Dr. Mustafa Ozan HORSANALI (Üye)</li><br>
+<li>Doç. Dr. Hande GAZETECİ TEKİN (Üye)</li><br>
+<li>Doç. Dr. Ramazan SABIRLI (Üye)</li><br>
+<li>Doç. Dr. Sabahattin Anıl ARI (Üye)</li><br>
+<li>Doç. Dr. Reyhan YİŞ (Üye)</li><br>
+<li>Doç. Dr. Fatma AKGÜL (Üye)</li><br>
+<li>Doç. Dr. Leman İNANÇ (Üye)</li><br>
+<li>Doç. Dr. Hale SEZER (Üye)</li><br>
+<li>Doç. Dr. Emre KARSLI (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Pelin KOCA (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Elif KESKİN ARSLAN (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Özden BEDRE DUYGU (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Levent ELMAS (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Damla EKER (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Hasan Akın TAHILLIOĞLU (Üye)</li><br>
+<li>Arş. Gör. Halide TEMELCİ</li><br>
+<li>Tıpta Uzmanlık Öğrencisi (Üye)</li><br>
+<li>Mezun Öğrenci (Üye)</li><br>
+<li>Dönem I Temsilcisi (Üye)</li><br>
+<li>Dönem II Temsilcisi (Üye)</li><br>
+<li>Dönem III Temsilcisi (Üye)</li><br>
+<li>Dönem IV Temsilcisi (Üye)</li><br>
+<li>Dönem V Temsilcisi (Üye)</li><br>
+<li>Dönem VI Temsilcisi (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p><b>Temel Çalışma İlkeleri ve Süreçler</b></p>
+<li><b>Gönüllülük Esası:</b> Akreditasyon süreci, kuruluşların kendi istekleriyle katıldıkları bir iyileştirme ve tanınırlık faaliyetidir.</li><br>
+<li><b>Kanıta Dayalı Değerlendirme:</b> Öz değerlendirme raporları (ÖDR) ve kurum incelemeleri, somut verilere, dokümanlara ve kanıtlara dayandırılır.</li><br>
+<li><b>Sürekli İyileştirme (PDCA):</b> Öz değerlendirme tek seferlik bir işlem değil, devamlılığı olan bir döngüdür (Planla-Uygula-Kontrol Et-Önlem Al).</li><br>
+<li><b>Etik ve Tarafsızlık:</b> Değerlendirme sürecinde çıkar çatışması bulunmamalı, değerlendiriciler tarafsız olmalı ve gizlilik prensiplerine uymalıdır.</li><br>
+<li><b>Öz Değerlendirme Raporu (ÖDR) Hazırlığı:</b> Kurumlar, akreditasyon kurulu tarafından belirlenen şablonlara göre detaylı bir öz değerlendirme raporu hazırlar.</li><br>
+<li><b>Ziyaret ve İnceleme:</b> Kurul, uzman ziyaret ekipleri aracılığıyla yerinde inceleme yaparak raporun doğruluğunu teyit eder.</li><br>
+<li><b>Kurumsal Yetkinlik:</b> Değerlendirme süreci, kurumun yönetim kalitesini artırmayı ve akademik/idari standartlarını yükseltmeyi hedefler.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/%C3%96DAK_USUL_VE_ESASLARI.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Öz Değerlendirme ve Akreditasyon Kurulu Sekreteryası</h3>
+<p>Semra Kahyaoğlu</p>
+<p><b>E-posta:</b> semra.kahyaoglu@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11339</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

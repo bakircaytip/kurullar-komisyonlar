@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sürekli Tıp Eğitimi Kurulu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+text{line-height: 1.6;}
+
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            SÜREKLİ TIP EĞİTİMİ KURULU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Kurul Hakkında"
+data-content="<p>Sürekli Tıp Eğitimi (STE), tıp doktorlarının mezuniyet sonrası dönemde meslek hayatları boyunca bilgi, beceri ve tutumlarını güncellemelerini
+     amaçlayan yaşam boyu öğrenme sürecidir. Bu süreçleri planlayan, denetleyen ve yürüten kurullara Sürekli Tıp Eğitimi Kurulu adı verilir.
+    </p>
+ <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Kurul Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>SÜREKLİ TIP EĞİTİMİ KURULU</u></h3>
+<li>Doç. Dr. İrfan ÖCAL (Başkan)</li><br>
+<li>Doç. Dr. Ali İhsan KILIÇ (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Elif KESKİN ARSLAN (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Ömer Faruk RAHMAN (Üye)</li><br>
+<li>Arş. Gör. Seval Ülkü ORHAN (Üye)</li><br>
+<li>Uzm. Dr. Ahmet Anıl BAŞKURT (Üye)</li><br>
+<li>Ass. Dr. Doğan AYDIN (Üye)</li><br>
+<li>Ass. Dr. Beyda ALTUNKAYA BÜYÜKTARAKÇI (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="ÇAlışma Prensipleri"
+data-content="<p><b>Görev ve Sorumluluk</b></p>
+<li>Kurul, STE etkinliklerini Anabilim Dalları ile birlikte planlar, organize ve koordine eder.</li><br>
+<li>Etkinlik takvimi oluşturur ve duyurur, etkinlikleri kayıt altına alır, arşivler ve standardize eder, denetler.</li><br>
+<li>Bilgilerin yazılı ve görsel olarak paylaşımını sağlar.</li><br>
+<li>(5)	Kurul, Tıp Fakültesi öğrencilerine, uzmanlık öğrencilerine, uzman ve pratisyen hekimlere, akademisyenlere ve toplumun tüm kesimine yönelik eğitici/bilgilendirici etkinlikler düzenler.</li><br>
+<br>
+<br>
+<p><b>Kurulun Çalışma Esasları</b></p><br>
+<li>Kurul akademik takvim süresince üç ayda bir toplanır. İhtiyaç halinde ara toplantılar düzenlenebilir. Toplantı kararları oyçokluğu ile alınır ve tutanak halinde arşivlenir.</li><br>
+<li>Kurul ve STE Danışma Kurulu en az yılda bir kez ortak toplanır.</li><br>
+<li>Kurul her eğitim-öğretim yılı sonunda gelecek eğitim-öğretim yılında yapacağı faaliyetler konusunda Anabilim dalları ile ortak, etkinlik takvimi belirler, yazılı ve görsel olarak duyurulmasını sağlar.</li><br>
+<li>Yapılan etkinliklerin kayıtlarını tutar ve arşivler, yazılı ve görsel olarak paylaşımını temin eder.</li><br>
+<li>Etkinliklerin afiş, duyuru, katılım belgesi vb. evraklarına ilişkin standartları, bununla ilgili formları belirler ve Tıbbi dokümantasyon ve arşiv birimi ile birlikte bunları organizasyon yetkililerine sunar.</li><br>
+<li>Etkinliklerin gerekli ise medya ile ilişkisini temin eder.</li><br>
+<li>Birlikte kullanım ve iş birliği yapılan Hastane Eğitim ve Organizasyon birimi ile koordineli olarak eğitim faaliyetlerini yürütür.</li><br>
+<li>Yazışma ve koordinasyon işleri, kayıtlar ve arşivleme STE sekreteri tarafından yürütülür.</li><br>
+<li>Yıllık planlarını ve eğitim-öğretim yılı sonunda hazırladıkları yıl içindeki faaliyetlerine ilişkin çalışma raporlarını Dekanlığa iletir.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/S%C3%9CREKL%C4%B0_TIP_E%C4%9E%C4%B0T%C4%B0M%C4%B0_KURULU_%C3%87ALI%C5%9E.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Sürekli Tıp Eğitimi Kurulu Sekreteryası</h3>
+<p>Çağdaş Üzbey</p>
+<p><b>E-posta:</b> cagdas.uzbey@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11026</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Kurul Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

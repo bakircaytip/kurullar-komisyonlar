@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kalite Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            KALİTE KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Komisyon, fakültenin eğitim-öğretim, araştırma ve idari hizmet kalitesini ulusal/uluslararası standartlara (örneğin TEPDAD) uygun hale getirmek
+     ve sürekli iyileştirmekle görevli akademik ve idari yapılandırılmış bir birimdir. Akreditasyon süreçlerini yönetir, iç değerlendirme raporları hazırlar
+      ve kalite kültürünü tüm paydaşlara yaymayı hedefler.</p>
+      <p><b>Görevleri</b></p>
+      <li>Birim İç değerlendirme raporlarını (BİDR) hazırlamak.</li><br>
+      <li>Eğitim müfredatını, öğretim yöntemlerini ve sınav sistemlerini kalite standartları çerçevesinde incelemek.</li><br>
+      <li>Öğrenci ve öğretim elemanlarından gelen geri bildirimleri (anketler vb.) değerlendirmek.</li><br>
+      <li>Akademik ve idari birimlerin işleyişini iyileştirici öneriler sunmak.</li><br>
+      <p><b>Kalite Kültürü:</b> Fakültede kalite bilincini yaygınlaştırmak, iyileştirme kültürü oluşturmak ve kalite elçileri aracılığıyla süreçlere katılımı artırmak.</p>
+      <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+      ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>KALİTE KOMİSYONU</u></h3>
+<li>Prof. Dr. Görkem YAMAN (Başkan)</li><br>
+<li>Prof. Dr. Fatma Demet ARSLAN (Üye)</li><br>
+<li>Doç. Dr. Ayşe Rabia KANBAK (Üye)</li><br>
+<li>Doç. Dr. Saadet Özen AKARCA DİZAKAR (Üye)</li><br>
+<li>Dr. Öğr. Üyesi  Gökben YASLI (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Özden Bedre DUYGU (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Enes TOKLU</li><br>
+<li>Öğr. Gör. Sezgi Fırat ÖZGÜR (Üye)</li><br>
+<li>Arş. Gör. Kadir KAYA (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p><b>Temel Çalışma Prensipleri</b></p>
+<li><b>Sürekli İyileştirme (PDCA Döngüsü):</b> Kalite geliştirme faaliyetleri; planlama, uygulama, kontrol etme ve önlem alma (PUKÖ) döngüsü çerçevesinde sürekli 
+    bir iyileştirme anlayışıyla yürütülür</li><br>
+<li><b>Kanıta Dayalı Değerlendirme:</b> İç değerlendirme süreçleri, performans göstergeleri, veri analizi ve anket sonuçları (öğrenci/öğretim üyesi memnuniyeti) 
+    gibi somut verilere dayandırılır.</li><br>
+<li><b>Paydaş Katılımı:</b> Eğitim-öğretim ve idari süreçlere öğrencilerin, akademik/idari personelin ve dış paydaşların (hastane yönetimi, mezunlar vb.) katılımı 
+    sağlanarak kalite kültürünün yaygınlaştırılması hedeflenir.</li><br>
+<li><b>Akreditasyon ve Standartlara Uyum:</b> Ulusal Tıp Eğitimi Akreditasyon Kurulu (UTEAK) ve YÖKAK standartlarına göre fakültenin eğitim, araştırma ve 
+    hizmet süreçlerini yapılandırır.</li><br>
+<li><b>Şeffaflık ve Raporlama:</b> Komisyon, yaptığı değerlendirmeleri ve yıllık iyileştirme planlarını fakülte yönetimi ve kamuoyu ile paylaşır</li><br>
+<li><b>Erişilebilirlik:</b> Eğitim kaynaklarının ve idari hizmetlerin verimliliği, öğrenci ve öğretim elemanları için erişilebilir ve etkin olması prensibiyle izlenir.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/KAL%C4%B0TE_KOM%C4%B0SYONU_%C3%87ALI%C5%9EMA_USUL_VE.pdf">
+📜 Mevzuat
+</button>
+
+<!-- ETKİNLİKLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content='
+
+<style>
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
+
+.event-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.event-body {
+    padding: 18px;
+}
+
+.event-title {
+    font-weight: 600;
+    color: #025860;
+}
+
+.event-date {
+    font-size: 0.85em;
+    color: #00a5b5;
+    margin: 6px 0;
+}
+</style>
+
+<h2>Etkinlikler</h2>
+
+<div class="event-container">
+
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1410/2026-yili-birim-ici-degerlendirme-hazirlik-toplantisi">
+<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/Kalite%202026%20B%C4%B0DR%20De%C4%9Ferlendirme%20Toplant%C4%B1s%C4%B1/%C4%B0zmir_Bak%C4%B1r%C3%A7ay_%C3%9Cniversitesi_T%C4%B1p_%20-%20Copy%201.jpg">
+<div class="event-body">
+<div class="event-title" style="color:blue">2026 Yılı Birim İçi Değerlendirme Hazırlık Toplantısı</div>
+<div class="event-date" style="color:blue">04 Mayıs 2026</div>
+<div style="color:blue">Kalite güvencesi çalışmaları kapsamında yürütülecek faaliyetler ele alındı...</div></a>
+</div>
+</div>
+
+
+
+</div>
+
+'>
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Kalite Komisyonu Sekreteryası</h3>
+<p>Semra Kahyaoğlu</p>
+<p><b>E-posta:</b> semra.kahyaoglu@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11339</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

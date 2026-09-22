@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ölçme ve Değerlendirme Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            ÖLÇME VE DEĞERLENDİRME KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Komisyon, İzmir Bakırçay Üniversitesi Tıp Fakültesinde verilen eğitimin 
+    İstatistik, Ölçme ve Değerlendirme çalışmalarına ilişkin usul ve esasları düzenlemek amacıyla oluşturulmuştur.</p>
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>ÖLÇME VE DEĞERLENDİRME KOMİSYONU</u></h3>
+<li>Prof. Dr. Ayşe Canan YAZICI GÜVERCİN (Başkan)</li><br>
+<li>Prof. Dr. Zülal EKİNCİOĞLU ÖNER (Üye)</li><br>
+<li>Prof. Dr. Teslime AYAZ (Üye)</li><br>
+<li>Prof. Dr. İbrahim KARACA (Üye)</li><br>
+<li>Prof. Dr. Ceylan AYADA (Üye)</li><br>
+<li>Prof. Dr. Semiha BAHÇECİ ERDEM (Üye)</li><br>
+<li>Prof. Dr. Hayriye GÖNÜLLÜ (Üye)</li><br>
+<li>Doç. Dr. Reyhan YİŞ (Üye)</li><br>
+<li>Doç. Dr. Leman İNANÇ (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Hayriye Dilek AKDOĞAN (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Levent ELMAS (Üye)</li><br>
+<li>Dönem I Temsilcisi (Üye)</li><br>
+<li>Dönem II Temsilcisi (Üye)</li><br>
+<li>Dönem III Temsilcisi (Üye)</li><br>
+<li>Dönem IV Temsilcisi (Üye)</li><br>
+<li>Dönem V Temsilcisi (Üye)</li><br>
+<li>Dönem VI Temsilcisi (Üye)</li><br>
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p>Ölçme ve Değerlendirme Komisyonu, eğitim kurumlarında başarıyı artırmak, sınavları analiz etmek ve müfredatla uyumu sağlamak için 
+    akademik esaslara göre çalışan bir yapıdır. Ölçme yöntemlerini geliştirir ve öğrenme çıktılarının analizini yapar.</p>
+    <p><b>Temel Çalışma Prensipleri ve Görevleri</b></p>
+    <li><b>Amaç ve Kapsam:</b> Eğitim-öğretim faaliyetlerinin niteliğini ve etkinliğini artırmak amacıyla öğrenci başarılarını ölçme, sınav sistemlerini değerlendirme ve 
+        öğrenme çıktılarının analiz edilmesi süreçlerini planlar ve yönetir.</li><br>
+    <li><b>Ölçme Araçları Geliştirme:</b> Ölçme-değerlendirme yöntemleri belirlemek ve akademik birimlere önerilerde bulunmak, 
+        sınav sorularının geçerlilik ve güvenilirliğini incelemek temel görevlerdendir.</li><br>
+    <li><b>Analiz ve Raporlama:</b> Sınav sonuçlarını teknik olarak analiz eder ve bu analizleri eğitim programının geliştirilmesi için raporlar.</li><br>
+    <li><b>Süreklilik:</b> Komisyon, eğitim-öğretim dönemi boyunca düzenli toplanarak, öz değerlendirme ve anket yöntemleriyle eğitim kalitesini sürekli izler.</li><br>
+    <li><b>Program Çıktıları ile Uyumluluk:</b> Bilgi, beceri ve yetkinlik açısından program çıktılarına ulaşmayı sağlamada ölçme-değerlendirme çalışmalarının yürütülmesini sağlar.</li><br>
+    ">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/%C3%96L%C3%87ME_VE_DE%C4%9EERLEND%C4%B0RME_KOM%C4%B0SYONU.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Ölçme ve Değerlendirme Komisyonu Sekreteryası</h3>
+<p>Ümit Doğan</p>
+<p><b>E-posta:</b> umit.dogan@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11310</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

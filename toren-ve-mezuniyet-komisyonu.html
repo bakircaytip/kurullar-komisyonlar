@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tören ve Mezuniyet Komisyonu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            TÖREN VE MEZUNİYET KOMİSYONU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Komisyon Hakkında"
+data-content="<p>Mezun durumundaki öğrencilerle fakülte arasındaki iletişimi sağlayan, mezuniyet töreni ve yemin töreni (Hipokrat andı) organizasyonunu planlayıp yöneten 
+    akademik bir kuruldur.</p>
+    <p><b>Komisyonun Temel Görevleri ve Detaylar</b></p>
+    <li><b>Tören Organizasyonu:</b> Mezuniyet töreninin yeri, zamanı, akışı, davetiyeler, konuşmacılar ve teknik altyapı gibi organizasyonel düzenlemeleri yapar.</li><br>
+    <li><b>Mezuniyet İncelemeleri:</b> Eğitim dönemini başarıyla tamamlayan öğrencilerin durumlarını mevzuata göre inceleyerek mezuniyet kararlarına katkı sağlar.</li><br>
+    <li><b>İletişim ve Koordinasyon:</b> Mezun olacak öğrencilerle fakülte yönetimi arasında köprü kurarak törenle ilgili bilgilendirmeleri yapar.</li><br>
+    <li><b>Yemin Töreni:</b> Tıp eğitiminin sonunda gerçekleştirilen yemin (Hipokrat andı) töreninin planlanmasını ve yürütülmesini sağlar.</li><br>
+    <li><b>Protokol ve Düzen:</b> Törenin akademik kurallara ve kurum kültürüne uygun, düzenli bir şekilde gerçekleşmesini organize eder.</li><br>
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Komisyon Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>TÖREN VE MEZUNİYET KOMİSYONU</u></h3>
+<li>Prof. Dr. Hayriye GÖNÜLLÜ (Başkan)</li><br>
+<li>Prof. Dr. Bayram ÇOLAK (Üye)</li><br>
+<li>Prof. Dr. Fatma Demet ARSLAN (Üye)</li><br>
+<li>Prof. Dr. Özgür OLUKMAN (Üye)</li><br>
+<li>Prof. Dr. Bedile İrem TİFTİKÇİOĞLU (Üye)</li><br>
+<li>Doç. Dr. İrfan ÖCAL (Üye)</li><br>
+<li>Doç. Dr. Ayşe Rabia KANBAK (Üye)</li><br>
+<li>Doç. Dr. Aylin ÇALLI (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Levent ELMAS (Üye)</li><br>
+<li>Dr. Öğr. Üyesi Ömer Faruk RAHMAN (Üye)</li>
+<li>Öğr. Gör. Sezgi Fırat ÖZGÜR (Üye)</li><br>
+<li>Arş. Gör. Gökçe ÇAM (Üye)</li><br>
+<li>Arş. Gör. Kadir KAYA (Üye)</li><br>
+<li>Murat ÖZOĞLU (Üye)</li><br>
+<li>Çağdaş ÜZBEY (Üye)</li><br>
+<li>Dönem I Temsilcisi (Üye)</li><br>
+<li>Dönem II Temsilcisi (Üye)</li><br>
+<li>Dönem III Temsilcisi (Üye)</li><br>
+<li>Dönem IV Temsilcisi (Üye)</li><br>
+<li>Dönem V Temsilcisi (Üye)</li><br>
+<li>Dönem VI Temsilcisi (Üye)</li><br>
+
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Prensipleri"
+data-content="<p><b>Çalışma Esasları</b></p>
+<li><b>Mevzuata Uygunluk:</b> Komisyon, üniversite ön lisans ve lisans eğitim-öğretim yönetmeliğine bağlı olarak çalışır.</li><br>
+<li><b>Raporlama:</b> Komisyon, faaliyetlerini Dekanlığa veya Fakülte Kurulu'na rapor eder.</li><br>
+<li><b>Toplantı Düzeni:</b> Tören dönemlerinde veya ihtiyaç duyulan zamanlarda toplanır, kararlar oy çokluğu veya oy birliği ile alınır.</li><br>
+<li><b>İşbirliği:</b> Törenin teknik, görsel ve içerik açısından en iyi şekilde yapılması için öğrenci temsilcileri veya diğer ilgili birimlerle işbirliği yapabilir.</li><br>
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/T%C3%96REN_VE_MEZUN%C4%B0YET_KOM%C4%B0SYONU_USU.pdf">
+📜 Mevzuat
+</button>
+
+
+<!-- ETKİNLİKLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content='
+
+<style>
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
+
+.event-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.event-body {
+    padding: 18px;
+}
+
+.event-title {
+    font-weight: 600;
+    color: #025860;
+}
+
+.event-date {
+    font-size: 0.85em;
+    color: #00a5b5;
+    margin: 6px 0;
+}
+</style>
+
+<h2>Etkinlikler</h2>
+
+<div class="event-container">
+
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1464/2025-2026-egitim-ogretim-yili-mezuniyet-torenimizi-buyuk-bir-gurur-ve-coskuyla-gerceklestirdik">
+<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/Mezuniyet%20T%C3%B6reni%20(2025-2026)/T1.jpeg">
+<div class="event-body">
+<div class="event-title" style="color:blue">2025–2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi büyük bir gurur ve coşkuyla gerçekleştirdik…</div>
+<div class="event-date" style="color:blue">03 Temmuz 2026</div>
+<div style="color:blue">İzmir Bakırçay Üniversitesi Tıp Fakültesi 2025–2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi...</div></a>
+</div>
+</div>
+
+
+
+</div>
+
+'>
+📅 Etkinlikler
+</button>
+
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Tören ve Mezuniyet Komisyonu Sekreteryası</h3>
+<p>Çağdaş Üzbey</p>
+<p><b>E-posta:</b> cagdas.uzbey@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11026</p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>
