@@ -1,0 +1,2 @@
+# kurullar-komisyonlar
+kurullar-komisyonlar
