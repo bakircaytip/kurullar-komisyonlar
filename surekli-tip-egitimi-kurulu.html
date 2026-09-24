@@ -224,13 +224,137 @@ data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%
 📜 Mevzuat
 </button>
 
-<!-- YENİ EKLENENLER -->
+<!--***************************************************************** ETKİNLİKLER *******************************************************************************-->
 
 <button class="bc-menu-btn"
 data-title="Etkinlikler"
-data-content="<h2></h2><p></p>">
+data-content='
+
+<style>
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .event-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .event-container { grid-template-columns: 1fr; }
+}
+
+.event-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.event-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
+
+.event-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.event-body {
+    padding: 18px;
+}
+
+.event-title {
+    font-weight: 300;
+    color: blue;
+    font-family: "Helvetica", sans-serif;
+}
+
+.event-date {
+    font-size: 0.85em;
+    font-weight: 700;
+    color: blue;
+    margin: 6px 0;
+    font-family: "Helvetica", sans-serif;
+}
+.text {
+    font-weight: 300;
+    color:gray;
+    font-family: "Helvetica", sans-serif;
+}
+</style>
+
+<h2>Etkinlikler</h2>
+
+<div class="event-container">
+
+<!-- Etkinlik 1 -->    
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=157" target="_blank" rel="noopener noreferrer">
+<img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/157/tus8.jpeg">
+<div class="event-body">
+<div class="event-title">TUS Mentörlük Serimize Başladık!</div>
+<div class="event-date">15 Eylül 2026</div>
+<div class="text">Tıp Fakültesi olarak öğrencilerimizin akademik ve mesleki yolculuklarında...</div>
+</div>
+</a>
+</div>
+
+<!-- Etkinlik 2 --> 
+<div class="event-card">
+    <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=160" target="_blank" rel="noopener noreferrer">
+        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/160/m4.jpeg" alt="Etkinlik görseli">
+        <div class="event-body">
+            <div class="event-title">Temel Mikrobiyom Analizi Kursu İzmir Bakırçay Üniversitesinde Gerçekleştirildi</div>
+            <div class="event-date">04 Eylül 2026</div>
+            <div class="text">Klinik Mikrobiyoloji Uzmanlık Derneği (KLİMUD) STE/SMG Etkinlikleri kapsamında düzenlenen...</div>
+        </div>
+    </a>
+</div>
+
+<!-- Etkinlik 3 --> 
+<div class="event-card">
+    <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=159" target="_blank" rel="noopener noreferrer">
+        <img class="event-img" src="https://webpanel.bakircay.edu.tr/upload/etkinlik/159/whatsapp_image_2026-09-03_at_16.46.42.jpeg" alt="Etkinlik görseli">
+        <div class="event-body">
+            <div class="event-title">Sürekli Tıp Eğitimi Kurulu ilk toplantısını gerçekleştirdik</div>
+            <div class="event-date">03 Eylül 2026</div>
+            <div class="text">Sürekli Tıp Eğitimi Kurulu olarak Doç. Dr. İrfan ÖCAL başkanlığında...</div>
+        </div>
+    </a>
+</div>
+
+<!-- Etkinlik 4 --> 
+<div class="event-card">
+    <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=143" target="_blank" rel="noopener noreferrer">
+        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/143/o6.jpeg" alt="Etkinlik görseli">
+        <div class="event-body">
+            <div class="event-title">Dijital Çağda Ortopedi: YouTube, Sosyal Medya ve Küresel Tıp Eğitimi</div>
+            <div class="event-date">28 Ağustos 2026</div>
+            <div class="text">“Uzmanla Buluşma” etkinliği kapsamında, “Dijital Çağda Ortopedi: YouTube, Sosyal Medya ve Küresel Tıp Eğitimi” başlıklı...</div>
+        </div>
+    </a>
+</div>
+
+</div>
+
+'>
 📅 Etkinlikler
 </button>
+<!-- ******************************************************************************************************************************************************************** -->
+
 
 <button class="bc-menu-btn"
 data-title="İletişim"

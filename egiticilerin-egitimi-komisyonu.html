@@ -213,7 +213,7 @@ data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%
 </button>
 
 
-<!-- ETKİNLİKLER -->
+<!--***************************************************************** ETKİNLİKLER *******************************************************************************-->
 
 <button class="bc-menu-btn"
 data-title="Etkinlikler"
@@ -222,8 +222,17 @@ data-content='
 <style>
 .event-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .event-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .event-container { grid-template-columns: 1fr; }
 }
 
 .event-card {
@@ -232,6 +241,14 @@ data-content='
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+    height: 100%;
+}
+
+.event-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 .event-card:hover {
@@ -240,7 +257,7 @@ data-content='
 
 .event-img {
     width: 100%;
-    height: 170px;
+    height: 230px;
     object-fit: cover;
 }
 
@@ -249,14 +266,22 @@ data-content='
 }
 
 .event-title {
-    font-weight: 600;
-    color: #025860;
+    font-weight: 300;
+    color: blue;
+    font-family: "Helvetica", sans-serif;
 }
 
 .event-date {
     font-size: 0.85em;
-    color: #00a5b5;
+    font-weight: 700;
+    color: blue;
     margin: 6px 0;
+    font-family: "Helvetica", sans-serif;
+}
+.text {
+    font-weight: 300;
+    color:gray;
+    font-family: "Helvetica", sans-serif;
 }
 </style>
 
@@ -264,26 +289,28 @@ data-content='
 
 <div class="event-container">
 
+<!-- Etkinlik 1 -->
 <div class="event-card">
-        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1427/egiticilerin-egitimi-temel-egitim-becerileri-kursu-tamamlandi">
-<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/E%C4%9Fiticilerin%20E%C4%9Fitimi%20Temel%20E%C4%9Fitim%20Becerileri%20Kursu%202026/WhatsApp_Image_2026_05_12_at_19_.33.jpeg">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=2&detailType=activity&detail=147" target="_blank" rel="noopener noreferrer">
+<img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/147/keyps7.jpeg">
 <div class="event-body">
-<div class="event-title" style="color:blue">2026 Yılı "Eğiticilerin Eğitimi Temel Eğitim Becerileri" Kursu tamamlandı</div>
-<div class="event-date" style="color:blue">12 Mayıs 2026</div>
-<div  style="color:blue">Eğiticilerin Eğitimi Temel Eğitim Becerileri Kursu Başarıyla Tamamlandı…</div></a>
+<div class="event-title">Tıp Fakültesi Akreditasyon sürecinde önemli bir adımı daha tamamladık</div>
+<div class="event-date">30 Temmuz 2026</div>
+<div class="text">Fakültemizde, Kurumsal Eğitim Yönetimi ve Planlama Sistemi (KEYPS) kullanımına yönelik eğitim...</div>
 </div>
+</a>
 </div>
 
-<div class="event-container">
-
+<!-- Etkinlik 2 -->
 <div class="event-card">
-        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1467/tip-fakultesi-akreditasyon-surecinde-onemli-bir-adimi-daha-tamamladik">
-<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/KEYPS%20Toplant%C4%B1s%C4%B1%202026/keyps1.jpeg">
-<div class="event-body">
-<div class="event-title" style="color:blue">Tıp Fakültesi Akreditasyon sürecinde önemli bir adımı daha tamamladık…</div>
-<div class="event-date" style="color:blue">30 Temmuz 2026</div>
-<div  style="color:blue">Kurumsal Eğitim Yönetimi ve Planlama Sistemi (KEYPS) kullanımına yönelik eğitim ...</div></a>
-</div>
+    <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=5&detailType=activity&detail=165" target="_blank" rel="noopener noreferrer">
+        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/165/egitici_egitimi_2026.png" alt="Etkinlik görseli">
+        <div class="event-body">
+            <div class="event-title">"Eğiticilerin Eğitimi Temel Eğitim Becerileri" Kursu</div>
+            <div class="event-date">12 Mayıs 2026</div>
+            <div class="text">11–12 Mayıs 2026 tarihlerinde, Program Sorumlusu Tıp Eğitimi Ana Bilim Dalı Başkanı Dr. Öğr. Üyesi Hayriye Dilek AKDOĞAN Koordinatörlüğünde...</div>
+        </div>
+    </a>
 </div>
 
 </div>
@@ -291,6 +318,7 @@ data-content='
 '>
 📅 Etkinlikler
 </button>
+<!-- ******************************************************************************************************************************************************************** -->
 
 <button class="bc-menu-btn"
 data-title="İletişim"

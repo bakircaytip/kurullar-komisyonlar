@@ -221,10 +221,7 @@ data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%
 📜 Mevzuat
 </button>
 
-<!-- YENİ EKLENENLER -->
-
-<!-- ETKİNLİKLER -->
-
+<!--***************************************************************** ETKİNLİKLER *******************************************************************************-->
 <button class="bc-menu-btn"
 data-title="Etkinlikler"
 data-content='
@@ -232,8 +229,17 @@ data-content='
 <style>
 .event-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .event-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .event-container { grid-template-columns: 1fr; }
 }
 
 .event-card {
@@ -242,6 +248,14 @@ data-content='
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+    height: 100%;
+}
+
+.event-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 .event-card:hover {
@@ -250,7 +264,7 @@ data-content='
 
 .event-img {
     width: 100%;
-    height: 170px;
+    height: 230px;
     object-fit: cover;
 }
 
@@ -259,14 +273,22 @@ data-content='
 }
 
 .event-title {
-    font-weight: 600;
-    color: #025860;
+    font-weight: 300;
+    color: blue;
+    font-family: "Helvetica", sans-serif;
 }
 
 .event-date {
     font-size: 0.85em;
-    color: #00a5b5;
+    font-weight: 700;
+    color: blue;
     margin: 6px 0;
+    font-family: "Helvetica", sans-serif;
+}
+.text {
+    font-weight: 300;
+    color:gray;
+    font-family: "Helvetica", sans-serif;
 }
 </style>
 
@@ -275,16 +297,27 @@ data-content='
 <div class="event-container">
 
 <div class="event-card">
-        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1456/ocm-2026-2027-egitim-ogretim-yili-toplantisi">
+        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1456/ocm-2026-2027-egitim-ogretim-yili-toplantisi" target="_blank" rel="noopener noreferrer">
 <img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/%C3%96%C3%87M%20Toplant%C4%B1%2009.06.2026/%C3%96%C3%87M_Toplt.jpeg">
 <div class="event-body">
-<div class="event-title" style="color:blue">ÖÇM 2026-2027 Eğitim-Öğretim Yılı Toplantısı</div>
-<div class="event-date" style="color:blue">09 HAziran 2026</div>
-<div  style="color:blue">ÖÇM 2026-2027 Eğitim-Öğretim Yılı hazırlıkları kapsamında düzenlenen toplantı…</div></a>
+<div class="event-title">ÖÇM 2026-2027 Eğitim-Öğretim Yılı Toplantısı</div>
+<div class="event-date">09 Haziran 2026</div>
+<div class="text">ÖÇM 2026-2027 Eğitim-Öğretim Yılı hazırlıkları kapsamında düzenlenen toplantı…</div>
 </div>
+</a>
 </div>
 
-
+<!-- İkinci etkinlik: bağlantıyı, görseli, başlığı, tarihi ve açıklamayı değiştirebilirsiniz. -->
+<div class="event-card">
+    <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=183" target="_blank" rel="noopener noreferrer">
+        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/183/whatsapp_image_2026-09-22_at_13.56.06.jpeg" alt="Etkinlik görseli">
+        <div class="event-body">
+            <div class="event-title">Özel Çalışma Modülü Tanıtım ve İşleyiş Prosedürü görüşüldü</div>
+            <div class="event-date">09 Eylül 2026</div>
+            <div class="text">Özel Çalışma Modüllerinin tanıtım ve uygulama süreçlerinin standartlaştırılması amacıyla...</div>
+        </div>
+    </a>
+</div>
 
 </div>
 
@@ -292,6 +325,8 @@ data-content='
 📅 Etkinlikler
 </button>
 
+
+<!-- ******************************************************************************************************************************************************************** -->
 <button class="bc-menu-btn"
 data-title="İletişim"
 data-content="<h3>Özel Çalışma Modülü (ÖÇM) Komisyonu Sekreteryası</h3>

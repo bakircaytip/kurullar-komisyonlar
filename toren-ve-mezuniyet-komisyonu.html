@@ -230,7 +230,8 @@ data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%
 </button>
 
 
-<!-- ETKİNLİKLER -->
+
+<!--***************************************************************** ETKİNLİKLER *******************************************************************************-->
 
 <button class="bc-menu-btn"
 data-title="Etkinlikler"
@@ -239,8 +240,17 @@ data-content='
 <style>
 .event-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .event-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .event-container { grid-template-columns: 1fr; }
 }
 
 .event-card {
@@ -249,6 +259,14 @@ data-content='
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+    height: 100%;
+}
+
+.event-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 .event-card:hover {
@@ -257,7 +275,7 @@ data-content='
 
 .event-img {
     width: 100%;
-    height: 170px;
+    height: 230px;
     object-fit: cover;
 }
 
@@ -266,14 +284,22 @@ data-content='
 }
 
 .event-title {
-    font-weight: 600;
-    color: #025860;
+    font-weight: 300;
+    color: blue;
+    font-family: "Helvetica", sans-serif;
 }
 
 .event-date {
     font-size: 0.85em;
-    color: #00a5b5;
+    font-weight: 700;
+    color: blue;
     margin: 6px 0;
+    font-family: "Helvetica", sans-serif;
+}
+.text {
+    font-weight: 300;
+    color:gray;
+    font-family: "Helvetica", sans-serif;
 }
 </style>
 
@@ -281,16 +307,17 @@ data-content='
 
 <div class="event-container">
 
+<!-- Etkinlik 1 -->
 <div class="event-card">
-        <a href="https://tip.bakircay.edu.tr/Etkinlikler/1464/2025-2026-egitim-ogretim-yili-mezuniyet-torenimizi-buyuk-bir-gurur-ve-coskuyla-gerceklestirdik">
-<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/Mezuniyet%20T%C3%B6reni%20(2025-2026)/T1.jpeg">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=2&detailType=news&detail=1201" target="_blank" rel="noopener noreferrer">
+<img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/150/t1.jpeg">
 <div class="event-body">
-<div class="event-title" style="color:blue">2025–2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi büyük bir gurur ve coşkuyla gerçekleştirdik…</div>
-<div class="event-date" style="color:blue">03 Temmuz 2026</div>
-<div style="color:blue">İzmir Bakırçay Üniversitesi Tıp Fakültesi 2025–2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi...</div></a>
+<div class="event-title">2025–2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi büyük bir gurur ve coşkuyla gerçekleştirdik</div>
+<div class="event-date">03 Temmuz 2026</div>
+<div class="text">Mesleğe ilk adımlarını atan tüm mezunlarımızı yürekten kutluyor; insan hayatına dokunacakları...</div>
 </div>
+</a>
 </div>
-
 
 
 </div>
@@ -298,6 +325,8 @@ data-content='
 '>
 📅 Etkinlikler
 </button>
+<!-- ******************************************************************************************************************************************************************** -->
+
 
 
 <button class="bc-menu-btn"
