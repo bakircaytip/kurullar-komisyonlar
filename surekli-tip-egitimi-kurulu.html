@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -134,9 +134,27 @@
     color: var(--bc-primary);
 }
 
+.bc-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    color: #111827;
+}
+
+.bc-content-area p,
+.bc-content-area li {
+    line-height: 1.6;
+}
+
 .bc-iframe {
     flex: 1;
+    width: 100%;
     border: none;
+}
+
+.bc-iframe[hidden],
+.bc-content-area[hidden] {
+    display: none;
 }
 text{line-height: 1.6;}
 
@@ -303,7 +321,7 @@ data-content='
 <!-- Etkinlik 1 -->    
 <div class="event-card">
         <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=157" target="_blank" rel="noopener noreferrer">
-<img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/157/tus8.jpeg">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/157/tus8.jpeg" alt="Etkinlik görseli">
 <div class="event-body">
 <div class="event-title">TUS Mentörlük Serimize Başladık!</div>
 <div class="event-date">15 Eylül 2026</div>
@@ -315,7 +333,7 @@ data-content='
 <!-- Etkinlik 2 --> 
 <div class="event-card">
     <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=160" target="_blank" rel="noopener noreferrer">
-        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/160/m4.jpeg" alt="Etkinlik görseli">
+        <img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/160/m4.jpeg" alt="Etkinlik görseli">
         <div class="event-body">
             <div class="event-title">Temel Mikrobiyom Analizi Kursu İzmir Bakırçay Üniversitesinde Gerçekleştirildi</div>
             <div class="event-date">04 Eylül 2026</div>
@@ -327,7 +345,7 @@ data-content='
 <!-- Etkinlik 3 --> 
 <div class="event-card">
     <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=159" target="_blank" rel="noopener noreferrer">
-        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/159/whatsapp_image_2026-09-03_at_16.46.42.jpeg" alt="Etkinlik görseli">
+        <img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/159/whatsapp_image_2026-09-03_at_16.46.42.jpeg" alt="Etkinlik görseli">
         <div class="event-body">
             <div class="event-title">Sürekli Tıp Eğitimi Kurulu ilk toplantısını gerçekleştirdik</div>
             <div class="event-date">03 Eylül 2026</div>
@@ -339,7 +357,7 @@ data-content='
 <!-- Etkinlik 4 --> 
 <div class="event-card">
     <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=143" target="_blank" rel="noopener noreferrer">
-        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/143/o6.jpeg" alt="Etkinlik görseli">
+        <img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/143/o6.jpeg" alt="Etkinlik görseli">
         <div class="event-body">
             <div class="event-title">Dijital Çağda Ortopedi: YouTube, Sosyal Medya ve Küresel Tıp Eğitimi</div>
             <div class="event-date">28 Ağustos 2026</div>
@@ -369,7 +387,8 @@ data-content="<h3>Sürekli Tıp Eğitimi Kurulu Sekreteryası</h3>
 
 <div class="bc-content">
 <div class="bc-content-header" id="contentTitle">Kurul Hakkında</div>
-<iframe id="iframe" class="bc-iframe"></iframe>
+<div id="contentArea" class="bc-content-area"></div>
+<iframe id="iframe" class="bc-iframe" hidden></iframe>
 </div>
 
 </div>
@@ -378,11 +397,11 @@ data-content="<h3>Sürekli Tıp Eğitimi Kurulu Sekreteryası</h3>
 <script>
 const buttons = document.querySelectorAll(".bc-menu-btn");
 const iframe = document.getElementById("iframe");
+const contentArea = document.getElementById("contentArea");
 const title = document.getElementById("contentTitle");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -390,23 +409,19 @@ buttons.forEach(btn => {
         const content = btn.getAttribute("data-content");
         const text = btn.getAttribute("data-title");
 
+        title.innerText = text;
+
         if (content) {
-            const html = `
-            <html>
-            <head>
-                <meta charset="UTF-8">
-                <style>
-                    body { font-family: Inter; padding: 40px; }
-                </style>
-            </head>
-            <body>${content}</body>
-            </html>`;
-            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
-        } else {
+            iframe.hidden = true;
+            iframe.removeAttribute("src");
+            contentArea.hidden = false;
+            contentArea.innerHTML = content;
+        } else if (url) {
+            contentArea.hidden = true;
+            contentArea.innerHTML = "";
+            iframe.hidden = false;
             iframe.src = url;
         }
-
-        title.innerText = text;
     });
 });
 
@@ -415,3 +430,5 @@ document.querySelector(".bc-menu-btn.active").click();
 
 </body>
 </html>
+
+
