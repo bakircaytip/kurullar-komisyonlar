@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tıp Eğitimi Öğrenci Kurulu (TEÖK)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            TIP EĞİTİMİ ÖĞRENCİ KURULU (TEÖK)
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Kurul Hakkında"
+data-content="<p>İzmir Bakırçay Üniversitesi Tıp Fakültesi mezuniyet öncesi tıp eğitimi programının planlanması, uygulanması, değerlendirilmesi ve sürekli iyileştirilmesine yönelik güncelleme 
+süreçlerinde öğrenci katılımının etkin biçimde sağlanması; ayrıca eğitim programının tüm paydaşları arasında etkili iletişim, iş birliği ve sistematik geri bildirim ile görüş alışverişi 
+mekanizmalarının geliştirilmesi amaçlanmaktadır.</p>
+    <p><b>Kurulun Görevleri</b></p>
+    <li>Tıp Fakültesi öğrencilerini tıp eğitimi ve öğretimi ile ilgili süreçlerde temsil etmek ve bu konuda Fakülte öğrencilerini temsile yetkili tüm paydaşlar ile koordinasyon ve 
+karşılıklı saygı içinde çalışır</li><br>
+    <li>Fakültede gerçekleştirilen eğitimin paydaşları arasında iletişim sağlar</li><br>
+    <li>Tıp eğitimindeki sorunları tespit ederek analizini yapar</li><br>
+    <li>Sorunların çözümüne ve mevcut durumun iyileştirilmesine yönelik öneriler geliştirir</li><br>
+    <li>Fakültedeki eğitim etkinliklerinin planlanma ve işleyişine ilişkin görüş ve önerilerde bulunur (grup dışındaki diğer öğrencilerin görüş ve önerilerini alma, değerlendirme, 
+        2 fakültede gerçekleştirilen program değerlendirme çalışmaları ve programda yapılan revizyonlar konusunda diğer öğrencileri bilgilendirme) </li><br>
+    <li>Tıp eğitimi ile ilgili iyi uygulama ve deneyimlerden yararlanır</li><br>
+    <li>Tıp eğitimi alanında etkinlikler (sempozyum, kongre vb) planlama, gerçekleştirir</li><br>
+    <li>Tıp Fakültesi Dekanlığının düzenlediği etkinliklerin organizasyonunda görev almak, dönem öğrencilerinin etkinliklere katılımı ve görev almasını teşvik eder</li><br>
+    <li>Fakültedeki eğitim etkinlikleri dışında fakültenin fiziki koşulları, sosyal etkinlikler gibi konular hakkında da görüş ve önerilerini dekanlığa sunar</li><br>
+  
+    <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Kurul Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-content="<h3><u>TIP EĞİTİMİ ÖĞRENCİ KURULU</u></h3>
+
+
+
+">
+👥 Üyeler
+</button>
+
+<button class="bc-menu-btn"
+data-title="Çalışma Şekli"
+data-content="<p><b>Çalışma Şekli</b></p>
+<li>Kurul en az iki ayda bir kez olmak üzere toplanır. Toplantılarda oy çokluğuyla alınan kararlar, görüş ve öneriler Dekanlığa sunulur. </li><br>
+<li>Toplantılarda ajandada yer alan konular ele alınır, toplantıda üyeler arasında görev dağılımı başkan tarafından yapılır. Bir sonraki toplantıda üyelerin çalışmaları üyeler 
+tarafından kurula sunulur. </li><br>
+<li>Toplantı yeri ve zamanını içeren çağrı kurul e-posta adresinden kurul üyelerinin @ogr.bakircay.edu.tr uzantılı e-posta adreslerine toplantı tarihinden en geç 2 gün önce 
+yapılır. Toplantıya katılamayacak üyelerin mazeretleri ile kurul e-posta adresine toplantı saatinden 2 saat öncesine kadar ulaşmaları gerekmektedir. Mazeretini iletmeyen, geç 
+ileten üyeler toplantıya mazeretsiz olarak katılmamış sayılır. </li><br>
+<li>Kurula üye olmak isteyen tıp fakültesi öğrencileri başvurularını yazılı olarak kurula iletir. Kurul başvuru sonrasındaki ilk toplantıda başvuruyu değerlendirmeye alır.</li><br>
+<li>Her toplantı sonunda üye başvuruları ve üyelerin devam durumları değerlendirilir. Art arda 3 mazeretli devamsızlığı ya da bir öğretim dönemi (güz ve bahar yarıyılları) içinde 
+toplam 2 mazeretsiz devamsızlığı olan üyelerin kurul üyeliğine son verilir. </li><br>
+
+">
+⚙️ Çalışma Prensipleri
+</button>
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/%C4%B0ZB%C3%9C_TIP_FAK%C3%9CLTES%C4%B0_TIP_E%C4%9E%C4%B0T%C4%B0M%C4%B0_%C3%96.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Tıp Eğitimi Öğrenci Kurulu Sekreteryası</h3>
+<p></p>
+<p><b>E-posta:</b></p>
+<p><b>Telefon:</b></p>">
+📞 İletişim
+</button>
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Kurul Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>

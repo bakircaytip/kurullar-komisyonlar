@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fakülte Danışma Kurulu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bc-primary: #00a5b5;
+    --bc-secondary: #025860;
+    --bc-dark: #1f2937;
+    --bc-light: #f8fafc;
+}
+
+.bc-panel {
+    max-width: 1400px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.bc-header {
+    position: relative;
+    padding: 20px 25px;
+    color: white;
+    overflow: hidden;
+}
+
+.bc-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #00a5b5, #025860);
+    z-index: 1;
+}
+
+.bc-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.05);
+    z-index: 2;
+}
+
+.bc-header-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bc-title {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bc-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bc-logo {
+    height: 60px;
+}
+
+.bc-home-btn {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85em;
+}
+
+.bc-body {
+    display: flex;
+    min-height: 650px;
+    background: white;
+}
+
+.bc-sidebar {
+    width: 300px;
+    background: var(--bc-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-menu-btn {
+    padding: 18px 22px;
+    color: #d1d5db;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.bc-menu-btn:hover {
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.bc-menu-btn.active {
+    background: var(--bc-primary);
+    color: white;
+}
+
+.bc-content {
+    flex: 1;
+    background: var(--bc-light);
+    display: flex;
+    flex-direction: column;
+}
+
+.bc-content-header {
+    padding: 18px 25px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    font-weight: 600;
+    color: var(--bc-primary);
+}
+
+.bc-iframe {
+    flex: 1;
+    border: none;
+}
+text{line-height: 1.6;}
+
+</style>
+</head>
+
+<body>
+
+<div class="bc-panel">
+
+<div class="bc-header">
+    <div class="bc-header-content">
+        <div class="bc-title">
+            FAKÜLTE DANIŞMA KURULU
+        </div>
+
+        <div class="bc-header-right">
+            <a href="https://tip.bakircay.edu.tr/" class="bc-home-btn">
+                Ana Sayfa
+            </a>
+
+            <img class="bc-logo"
+            src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/tip_logo.png">
+        </div>
+    </div>
+</div>
+
+<div class="bc-body">
+
+<div class="bc-sidebar">
+
+<button class="bc-menu-btn active"
+data-title="Kurul Hakkında"
+data-content="
+<p>Üniversitemizin 01.06.2022 tarihli ve 15/01 sayılı Senato Kararı ile yürürlüğe giren, 
+    İzmir Bakırçay Üniversitesi Danışma Kurulları Yönergesi'nin 5. maddesinin 4. fıkrasına isitinaden, uygun danışma kurullarının oluşturulması kararına istinaden 
+    22.06.2026 tarih 2026/3 Nolu Fakülte Kurulu kararı ile İzmir Bakırçay Üniversitesi Tıp Fakültesi Fakülte Danışma Kurulu kurulmuştur.</p>
+<br>
+<p>İzmir Bakırçay Üniversitesi Tıp Fakültesi Fakülte Danışma Kurulu Üyeleri iç paydaş, dış paydaş ve öğrenci 'den oluşmaktadır. </p>
+<p>
+    <li><b>İç Paydaş:</b> Birimin faaliyet alanıyla ilgili konularda çalışmaları bulunan İzmir Bakırçay Üniversitesi bünyesinden öğretim elemanları ve/veya idari birim yöneticileridir.</li><br>
+    <li><b>Dış Paydaş:</b> Birimin çalışma alanlarına katkıda bulunabilecek, İzmir Bakırçay Üniversitesi bünyesi dışından, resmi veya özel kurum ve kuruluşların temsilcileri veya bu alanda ilgili çalışmaları bulunanlar ile bu konuda hizmet vermiş kişilerdir.</li><br>
+    <li><b>Öğrenci Üye:</b> Varsa eğer, Birimin faaliyet alanlarına destek verecek İzmir Bakırçay Üniversitesinde öğrenim gören lisans, ön lisans ve/veya lisansüstü öğrencileridir.</li><br>
+</p>
+ <style>
+p {line-height: 1.6; text-align: justify;color: black};
+ </style>
+    ">
+📋 Kurul Hakkında
+</button>
+
+<button class="bc-menu-btn"
+data-title="Üyeler"
+data-title="Fakülte Danışma Kurulu Üyeleri"
+data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/%C4%B0ZB%C3%9C_T%C4%B1p_Fak%C3%BClte_Dan%C4%B1%C5%9Fma_Kurulu_.2026.pdf">
+
+👥 Üyeler
+</button>
+
+
+
+<button class="bc-menu-btn"
+data-title="Mevzuat"
+data-url="https://bakircay.edu.tr/Yuklenenler/danisma_kurullari_yonergesi.pdf">
+📜 Mevzuat
+</button>
+
+<!-- YENİ EKLENENLER -->
+
+<button class="bc-menu-btn"
+data-title="Etkinlikler"
+data-content="<h2></h2><p></p>">
+📅 Etkinlikler
+</button>
+
+<button class="bc-menu-btn"
+data-title="İletişim"
+data-content="<h3>Fakülte Danışma Kurulu Sekreteryası</h3>
+<p>Murat Özoğlu</p>
+<p><b>E-posta:</b> murat.ozoglu@bakircay.edu.tr</p>
+<p><b>Telefon:</b> (0232) 493 00 00 / 11133</p>">
+📞 İletişim
+</button>
+
+
+</div>
+
+<div class="bc-content">
+<div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
+<iframe id="iframe" class="bc-iframe"></iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+const buttons = document.querySelectorAll(".bc-menu-btn");
+const iframe = document.getElementById("iframe");
+const title = document.getElementById("contentTitle");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const url = btn.getAttribute("data-url");
+        const content = btn.getAttribute("data-content");
+        const text = btn.getAttribute("data-title");
+
+        if (content) {
+            const html = `
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { font-family: Inter; padding: 40px; }
+                </style>
+            </head>
+            <body>${content}</body>
+            </html>`;
+            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
+        } else {
+            iframe.src = url;
+        }
+
+        title.innerText = text;
+    });
+});
+
+document.querySelector(".bc-menu-btn.active").click();
+</script>
+
+</body>
+</html>
