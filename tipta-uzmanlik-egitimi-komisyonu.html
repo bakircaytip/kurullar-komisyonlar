@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -134,9 +134,27 @@
     color: var(--bc-primary);
 }
 
+.bc-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    color: #111827;
+}
+
+.bc-content-area p,
+.bc-content-area li {
+    line-height: 1.6;
+}
+
 .bc-iframe {
     flex: 1;
+    width: 100%;
     border: none;
+}
+
+.bc-iframe[hidden],
+.bc-content-area[hidden] {
+    display: none;
 }
 </style>
 </head>
@@ -180,7 +198,7 @@ data-content="<p>Tıpta Uzmanlık Eğitimi Komisyonu, fakültemizde ve İzmir Ba
 p {line-height: 1.6; text-align: justify;color: black};
  </style>
     ">
-📋 Komisyon Hakkında
+gY"< Komisyon Hakkında
 </button>
 
 <button class="bc-menu-btn"
@@ -196,7 +214,7 @@ data-content="<h3><u>TIPTA UZMANLIK EĞİTİMİ KOMİSYONU</u></h3>
 <li>Tıpta Uzmanlık Öğrencisi Dr. Oktay BAKIN (KBB) (Üye)</li><br>
 <li>Mezun Öğrenci Dr. Aziz KOCA (Üye)</li><br>
 ">
-👥 Üyeler
+gY'¥ Üyeler
 </button>
 
 <button class="bc-menu-btn"
@@ -215,13 +233,13 @@ data-content="
 <li><b>Şeffaflık ve Belgelem:</b> Uzmanlık eğitimi ile ilgili tüm işlemleri mevzuata uygun olarak tutanak altına almak ve saklamak.</li><br>
 <li><b>Yönetmelik Uyumu:</b>Yönerge Uyumu: Çalışmalar, üniversite veya hastanenin Uzmanlık Eğitimi Yönergesi çerçevesinde yürütülür.</li><br>
 ">
-⚙️ Çalışma Prensipleri
+âsTï¸ Çalışma Prensipleri
 </button>
 
 <button class="bc-menu-btn"
 data-title="Mevzuat"
 data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/TIPTA_UZMANLIK_E%C4%9E%C4%B0T%C4%B0M%C4%B0_KOM%C4%B0SYONU.pdf">
-📜 Mevzuat
+gY"o Mevzuat
 </button>
 
 <!-- YENİ EKLENENLER -->
@@ -229,7 +247,7 @@ data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%
 <button class="bc-menu-btn"
 data-title="Etkinlikler"
 data-content="<h2></h2><p></p>">
-📅 Etkinlikler
+gY". Etkinlikler
 </button>
 
 <button class="bc-menu-btn"
@@ -238,14 +256,15 @@ data-content="<h3>Tıpta Uzmanlık Eğitimi Komisyonu Sekreteryası</h3>
 <p>Derya Eryılmaz</p>
 <p><b>E-posta:</b> derya.eryilmaz@bakircay.edu.tr</p>
 <p><b>Telefon:</b> (0232) 493 00 00 / 11600</p>">
-📞 İletişim
+gY" İletişim
 </button>
 
 </div>
 
 <div class="bc-content">
 <div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
-<iframe id="iframe" class="bc-iframe"></iframe>
+<div id="contentArea" class="bc-content-area"></div>
+<iframe id="iframe" class="bc-iframe" hidden></iframe>
 </div>
 
 </div>
@@ -254,11 +273,11 @@ data-content="<h3>Tıpta Uzmanlık Eğitimi Komisyonu Sekreteryası</h3>
 <script>
 const buttons = document.querySelectorAll(".bc-menu-btn");
 const iframe = document.getElementById("iframe");
+const contentArea = document.getElementById("contentArea");
 const title = document.getElementById("contentTitle");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -266,23 +285,21 @@ buttons.forEach(btn => {
         const content = btn.getAttribute("data-content");
         const text = btn.getAttribute("data-title");
 
+        title.innerText = text;
+
         if (content) {
-            const html = `
-            <html>
-            <head>
-                <meta charset="UTF-8">
-                <style>
-                    body { font-family: Inter; padding: 40px; }
-                </style>
-            </head>
-            <body>${content}</body>
-            </html>`;
-            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
-        } else {
+            iframe.hidden = true;
+            iframe.removeAttribute("src");
+            iframe.removeAttribute("srcdoc");
+            contentArea.hidden = false;
+            contentArea.innerHTML = content;
+        } else if (url) {
+            contentArea.hidden = true;
+            contentArea.innerHTML = "";
+            iframe.hidden = false;
+            iframe.removeAttribute("srcdoc");
             iframe.src = url;
         }
-
-        title.innerText = text;
     });
 });
 
@@ -291,3 +308,4 @@ document.querySelector(".bc-menu-btn.active").click();
 
 </body>
 </html>
+

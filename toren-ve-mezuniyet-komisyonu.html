@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -134,9 +134,27 @@
     color: var(--bc-primary);
 }
 
+.bc-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    color: #111827;
+}
+
+.bc-content-area p,
+.bc-content-area li {
+    line-height: 1.6;
+}
+
 .bc-iframe {
     flex: 1;
+    width: 100%;
     border: none;
+}
+
+.bc-iframe[hidden],
+.bc-content-area[hidden] {
+    display: none;
 }
 </style>
 </head>
@@ -180,7 +198,7 @@ data-content="<p>Mezun durumundaki öğrencilerle fakülte arasındaki iletişim
 p {line-height: 1.6; text-align: justify;color: black};
  </style>
     ">
-📋 Komisyon Hakkında
+gY"< Komisyon Hakkında
 </button>
 
 <button class="bc-menu-btn"
@@ -209,7 +227,7 @@ data-content="<h3><u>TÖREN VE MEZUNİYET KOMİSYONU</u></h3>
 <li>Dönem VI Temsilcisi (Üye)</li><br>
 
 ">
-👥 Üyeler
+gY'¥ Üyeler
 </button>
 
 <button class="bc-menu-btn"
@@ -220,13 +238,13 @@ data-content="<p><b>Çalışma Esasları</b></p>
 <li><b>Toplantı Düzeni:</b> Tören dönemlerinde veya ihtiyaç duyulan zamanlarda toplanır, kararlar oy çokluğu veya oy birliği ile alınır.</li><br>
 <li><b>İşbirliği:</b> Törenin teknik, görsel ve içerik açısından en iyi şekilde yapılması için öğrenci temsilcileri veya diğer ilgili birimlerle işbirliği yapabilir.</li><br>
 ">
-⚙️ Çalışma Prensipleri
+âsTï¸ Çalışma Prensipleri
 </button>
 
 <button class="bc-menu-btn"
 data-title="Mevzuat"
 data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/T%C3%96REN_VE_MEZUN%C4%B0YET_KOM%C4%B0SYONU_USU.pdf">
-📜 Mevzuat
+gY"o Mevzuat
 </button>
 
 
@@ -310,9 +328,9 @@ data-content='
 <!-- Etkinlik 1 -->
 <div class="event-card">
         <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=2&detailType=news&detail=1201" target="_blank" rel="noopener noreferrer">
-<img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/150/t1.jpeg">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/150/t1.jpeg">
 <div class="event-body">
-<div class="event-title">2025–2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi büyük bir gurur ve coşkuyla gerçekleştirdik</div>
+<div class="event-title">2025-2026 Eğitim-Öğretim Yılı Mezuniyet Törenimizi büyük bir gurur ve coşkuyla gerçekleştirdik</div>
 <div class="event-date">03 Temmuz 2026</div>
 <div class="text">Mesleğe ilk adımlarını atan tüm mezunlarımızı yürekten kutluyor; insan hayatına dokunacakları...</div>
 </div>
@@ -323,7 +341,7 @@ data-content='
 </div>
 
 '>
-📅 Etkinlikler
+gY". Etkinlikler
 </button>
 <!-- ******************************************************************************************************************************************************************** -->
 
@@ -335,14 +353,15 @@ data-content="<h3>Tören ve Mezuniyet Komisyonu Sekreteryası</h3>
 <p>Çağdaş Üzbey</p>
 <p><b>E-posta:</b> cagdas.uzbey@bakircay.edu.tr</p>
 <p><b>Telefon:</b> (0232) 493 00 00 / 11026</p>">
-📞 İletişim
+gY" İletişim
 </button>
 
 </div>
 
 <div class="bc-content">
 <div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
-<iframe id="iframe" class="bc-iframe"></iframe>
+<div id="contentArea" class="bc-content-area"></div>
+<iframe id="iframe" class="bc-iframe" hidden></iframe>
 </div>
 
 </div>
@@ -351,11 +370,11 @@ data-content="<h3>Tören ve Mezuniyet Komisyonu Sekreteryası</h3>
 <script>
 const buttons = document.querySelectorAll(".bc-menu-btn");
 const iframe = document.getElementById("iframe");
+const contentArea = document.getElementById("contentArea");
 const title = document.getElementById("contentTitle");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -363,23 +382,21 @@ buttons.forEach(btn => {
         const content = btn.getAttribute("data-content");
         const text = btn.getAttribute("data-title");
 
+        title.innerText = text;
+
         if (content) {
-            const html = `
-            <html>
-            <head>
-                <meta charset="UTF-8">
-                <style>
-                    body { font-family: Inter; padding: 40px; }
-                </style>
-            </head>
-            <body>${content}</body>
-            </html>`;
-            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
-        } else {
+            iframe.hidden = true;
+            iframe.removeAttribute("src");
+            iframe.removeAttribute("srcdoc");
+            contentArea.hidden = false;
+            contentArea.innerHTML = content;
+        } else if (url) {
+            contentArea.hidden = true;
+            contentArea.innerHTML = "";
+            iframe.hidden = false;
+            iframe.removeAttribute("srcdoc");
             iframe.src = url;
         }
-
-        title.innerText = text;
     });
 });
 
@@ -388,3 +405,4 @@ document.querySelector(".bc-menu-btn.active").click();
 
 </body>
 </html>
+

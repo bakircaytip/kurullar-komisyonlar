@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -134,9 +134,27 @@
     color: var(--bc-primary);
 }
 
+.bc-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    color: #111827;
+}
+
+.bc-content-area p,
+.bc-content-area li {
+    line-height: 1.6;
+}
+
 .bc-iframe {
     flex: 1;
+    width: 100%;
     border: none;
+}
+
+.bc-iframe[hidden],
+.bc-content-area[hidden] {
+    display: none;
 }
 </style>
 </head>
@@ -180,7 +198,7 @@ data-content="<p>Mezuniyet Öncesi Tıp Eğitimi Koordinasyon Komisyonu (MÖTEK)
 p {line-height: 1.6; text-align: justify;};
  </style>
         ">
-📋 Komisyon Hakkında
+gY"< Komisyon Hakkında
 </button>
 
 <button class="bc-menu-btn"
@@ -202,7 +220,6 @@ data-content="<h3><u>MEZUNİYET ÖNCESİ TIP EĞİTİMİ KOORDİNASYON KOMİSYON
 <li>Dr. Öğr. Üyesi Elif KESKİN ARSLAN (Üye)</li><br>
 <li>Dr. Öğr. Üyesi Pelin KOCA (Üye)</li><br>
 <li>Dr. Öğr. Üyesi Hasan Akın TAHILLIOĞLU (Üye)</li><br>
-<li>Dr. Öğr. Üyesi Hayriye Dilek AKDOĞAN (Üye)</li><br>
 <li>Dönem I Temsilcisi (Üye)</li><br>
 <li>Dönem II Temsilcisi (Üye)</li><br>
 <li>Dönem III Temsilcisi (Üye)</li><br>
@@ -210,7 +227,7 @@ data-content="<h3><u>MEZUNİYET ÖNCESİ TIP EĞİTİMİ KOORDİNASYON KOMİSYON
 <li>Dönem V Temsilcisi (Üye)</li><br>
 <li>Dönem VI Temsilcisi (Üye)</li><br>
 ">
-👥 Üyeler
+gY'¥ Üyeler
 </button>
 
 <button class="bc-menu-btn"
@@ -225,13 +242,13 @@ data-content="<p><b>Çalışma Prensipleri</b></p>
 p {line-height: 1.6; text-align: justify;color: black};
  </style>
 ">
-⚙️ Çalışma Prensipleri
+âsTï¸ Çalışma Prensipleri
 </button>
 
 <button class="bc-menu-btn"
 data-title="Mevzuat"
 data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/M%C3%96TEK_%C3%87ALI%C5%9EMA_USUL_VE_ESASLARI.pdf">
-📜 Mevzuat
+gY"o Mevzuat
 </button>
 
 
@@ -312,11 +329,11 @@ data-content='
 
 <div class="event-card">
         <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=5&detailType=activity&detail=170" target="_blank" rel="noopener noreferrer">
-<img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/170/whatsapp_image_2026_04_30_at_09_.07.jpeg">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/170/whatsapp_image_2026_04_30_at_09_.07.jpeg">
 <div class="event-body">
 <div class="event-title">MÖTEK Toplantısı ile Akreditasyon Süreçleri Değerlendirildi</div>
 <div class="event-date">29 Nisan 2026</div>
-<div class="text">Akreditasyon hazırlıkları çerçevesinde yapılan değerlendirmelerde, eğitim programının yatay ve dikey entegrasyonu…</div>
+<div class="text">Akreditasyon hazırlıkları çerçevesinde yapılan değerlendirmelerde, eğitim programının yatay ve dikey entegrasyonuâ?¦</div>
 </div>
 </a>
 </div>
@@ -324,11 +341,11 @@ data-content='
 <!-- İkinci etkinlik: bağlantıyı, görseli, başlığı, tarihi ve açıklamayı değiştirebilirsiniz. -->
 <div class="event-card">
     <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=2&detailType=activity&detail=145" target="_blank" rel="noopener noreferrer">
-        <img class="event-img" src="https://tip.bakircay.edu.tr/upload/etkinlik/145/m1.jpeg" alt="Etkinlik görseli">
+        <img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/145/m1.jpeg" alt="Etkinlik görseli">
         <div class="event-body">
             <div class="event-title">Tıp Fakültesi Eğitim-Öğretim ve Sınav Yönergesi Hazırlıkları Devam Ediyor</div>
             <div class="event-date">20 Ağustos 2026</div>
-            <div class="text">“İzmir Bakırçay Üniversitesi Tıp Fakültesi Eğitim-Öğretim ve Sınav Yönergesi” taslağı ele alınarak...</div>
+            <div class="text">â?oİzmir Bakırçay Üniversitesi Tıp Fakültesi Eğitim-Öğretim ve Sınav Yönergesiâ? taslağı ele alınarak...</div>
         </div>
     </a>
 </div>
@@ -336,7 +353,7 @@ data-content='
 </div>
 
 '>
-📅 Etkinlikler
+gY". Etkinlikler
 </button>
 
 
@@ -348,14 +365,15 @@ data-content="<h3>Mezuniyet Öncesi Tıp Eğitimi Koordinasyon Komisyonu (MÖTEK
 <p>Ümit Doğan</p>
 <p><b>E-posta:</b> umit.dogan@bakircay.edu.tr</p>
 <p><b>Telefon:</b> (0232) 493 00 00 / 11310</p>">
-📞 İletişim
+gY" İletişim
 </button>
 
 </div>
 
 <div class="bc-content">
 <div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
-<iframe id="iframe" class="bc-iframe"></iframe>
+<div id="contentArea" class="bc-content-area"></div>
+<iframe id="iframe" class="bc-iframe" hidden></iframe>
 </div>
 
 </div>
@@ -364,11 +382,11 @@ data-content="<h3>Mezuniyet Öncesi Tıp Eğitimi Koordinasyon Komisyonu (MÖTEK
 <script>
 const buttons = document.querySelectorAll(".bc-menu-btn");
 const iframe = document.getElementById("iframe");
+const contentArea = document.getElementById("contentArea");
 const title = document.getElementById("contentTitle");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -376,23 +394,21 @@ buttons.forEach(btn => {
         const content = btn.getAttribute("data-content");
         const text = btn.getAttribute("data-title");
 
+        title.innerText = text;
+
         if (content) {
-            const html = `
-            <html>
-            <head>
-                <meta charset="UTF-8">
-                <style>
-                    body { font-family: Inter; padding: 40px; }
-                </style>
-            </head>
-            <body>${content}</body>
-            </html>`;
-            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
-        } else {
+            iframe.hidden = true;
+            iframe.removeAttribute("src");
+            iframe.removeAttribute("srcdoc");
+            contentArea.hidden = false;
+            contentArea.innerHTML = content;
+        } else if (url) {
+            contentArea.hidden = true;
+            contentArea.innerHTML = "";
+            iframe.hidden = false;
+            iframe.removeAttribute("srcdoc");
             iframe.src = url;
         }
-
-        title.innerText = text;
     });
 });
 
@@ -401,3 +417,4 @@ document.querySelector(".bc-menu-btn.active").click();
 
 </body>
 </html>
+

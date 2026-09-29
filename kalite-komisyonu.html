@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -134,9 +134,27 @@
     color: var(--bc-primary);
 }
 
+.bc-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    color: #111827;
+}
+
+.bc-content-area p,
+.bc-content-area li {
+    line-height: 1.6;
+}
+
 .bc-iframe {
     flex: 1;
+    width: 100%;
     border: none;
+}
+
+.bc-iframe[hidden],
+.bc-content-area[hidden] {
+    display: none;
 }
 </style>
 </head>
@@ -181,7 +199,7 @@ data-content="<p>Komisyon, fakültenin eğitim-öğretim, araştırma ve idari h
 p {line-height: 1.6; text-align: justify;color: black};
  </style>
       ">
-📋 Komisyon Hakkında
+gY"< Komisyon Hakkında
 </button>
 
 <button class="bc-menu-btn"
@@ -197,7 +215,7 @@ data-content="<h3><u>KALİTE KOMİSYONU</u></h3>
 <li>Öğr. Gör. Sezgi Fırat ÖZGÜR (Üye)</li><br>
 <li>Arş. Gör. Kadir KAYA (Üye)</li><br>
 ">
-👥 Üyeler
+gY'¥ Üyeler
 </button>
 
 <button class="bc-menu-btn"
@@ -214,13 +232,13 @@ data-content="<p><b>Temel Çalışma Prensipleri</b></p>
 <li><b>Şeffaflık ve Raporlama:</b> Komisyon, yaptığı değerlendirmeleri ve yıllık iyileştirme planlarını fakülte yönetimi ve kamuoyu ile paylaşır</li><br>
 <li><b>Erişilebilirlik:</b> Eğitim kaynaklarının ve idari hizmetlerin verimliliği, öğrenci ve öğretim elemanları için erişilebilir ve etkin olması prensibiyle izlenir.</li><br>
 ">
-⚙️ Çalışma Prensipleri
+âsTï¸ Çalışma Prensipleri
 </button>
 
 <button class="bc-menu-btn"
 data-title="Mevzuat"
 data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/KAL%C4%B0TE_KOM%C4%B0SYONU_%C3%87ALI%C5%9EMA_USUL_VE.pdf">
-📜 Mevzuat
+gY"o Mevzuat
 </button>
 
 
@@ -303,7 +321,7 @@ data-content='
 <!-- Etkinlik 1 -->
 <div class="event-card">
         <a href="https://tip.bakircay.edu.tr/Etkinlikler/1410/2026-yili-birim-ici-degerlendirme-hazirlik-toplantisi" target="_blank" rel="noopener noreferrer">
-<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/Kalite%202026%20B%C4%B0DR%20De%C4%9Ferlendirme%20Toplant%C4%B1s%C4%B1/%C4%B0zmir_Bak%C4%B1r%C3%A7ay_%C3%9Cniversitesi_T%C4%B1p_%20-%20Copy%201.jpg">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/PANEL-KONFERANS-SEMPOZYUM/Kalite%202026%20B%C4%B0DR%20De%C4%9Ferlendirme%20Toplant%C4%B1s%C4%B1/%C4%B0zmir_Bak%C4%B1r%C3%A7ay_%C3%9Cniversitesi_T%C4%B1p_%20-%20Copy%201.jpg">
 <div class="event-body">
 <div class="event-title">2026 Yılı Birim İçi Değerlendirme Hazırlık Toplantısı</div>
 <div class="event-date">04 Mayıs 2026</div>
@@ -315,7 +333,7 @@ data-content='
 </div>
 
 '>
-📅 Etkinlikler
+gY". Etkinlikler
 </button>
 <!-- ******************************************************************************************************************************************************************** -->
 
@@ -325,14 +343,15 @@ data-content="<h3>Kalite Komisyonu Sekreteryası</h3>
 <p>Semra Kahyaoğlu</p>
 <p><b>E-posta:</b> semra.kahyaoglu@bakircay.edu.tr</p>
 <p><b>Telefon:</b> (0232) 493 00 00 / 11339</p>">
-📞 İletişim
+gY" İletişim
 </button>
 
 </div>
 
 <div class="bc-content">
 <div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
-<iframe id="iframe" class="bc-iframe"></iframe>
+<div id="contentArea" class="bc-content-area"></div>
+<iframe id="iframe" class="bc-iframe" hidden></iframe>
 </div>
 
 </div>
@@ -341,11 +360,11 @@ data-content="<h3>Kalite Komisyonu Sekreteryası</h3>
 <script>
 const buttons = document.querySelectorAll(".bc-menu-btn");
 const iframe = document.getElementById("iframe");
+const contentArea = document.getElementById("contentArea");
 const title = document.getElementById("contentTitle");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -353,25 +372,21 @@ buttons.forEach(btn => {
         const content = btn.getAttribute("data-content");
         const text = btn.getAttribute("data-title");
 
+        title.innerText = text;
+
         if (content) {
-            const html = `
-            <html>
-            <head>
-                <meta charset="UTF-8">
-                <style>
-                    body { font-family: Inter; padding: 40px; }
-                </style>
-            </head>
-            <body>${content}</body>
-            </html>`;
+            iframe.hidden = true;
             iframe.removeAttribute("src");
-            iframe.srcdoc = html;
-        } else {
+            iframe.removeAttribute("srcdoc");
+            contentArea.hidden = false;
+            contentArea.innerHTML = content;
+        } else if (url) {
+            contentArea.hidden = true;
+            contentArea.innerHTML = "";
+            iframe.hidden = false;
             iframe.removeAttribute("srcdoc");
             iframe.src = url;
         }
-
-        title.innerText = text;
     });
 });
 
@@ -380,3 +395,4 @@ document.querySelector(".bc-menu-btn.active").click();
 
 </body>
 </html>
+

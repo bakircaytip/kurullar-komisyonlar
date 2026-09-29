@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -134,9 +134,27 @@
     color: var(--bc-primary);
 }
 
+.bc-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow: auto;
+    color: #111827;
+}
+
+.bc-content-area p,
+.bc-content-area li {
+    line-height: 1.6;
+}
+
 .bc-iframe {
     flex: 1;
+    width: 100%;
     border: none;
+}
+
+.bc-iframe[hidden],
+.bc-content-area[hidden] {
+    display: none;
 }
 </style>
 </head>
@@ -175,7 +193,7 @@ data-content="<p>Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu, öğrenciler
 p {line-height: 1.6; text-align: justify;color: black};
  </style>
     ">
-📋 Komisyon Hakkında
+gY"< Komisyon Hakkında
 </button>
 
 <button class="bc-menu-btn"
@@ -194,7 +212,7 @@ data-content="<h3><u>SOSYAL SORUMLULUK PROJELERİ VE ETKİNLİK KOMİSYONU</u></
 <li>Dönem V Temsilcisi (Üye)</li><br>
 <li>Dönem VI Temsilcisi (Üye)</li><br>
 ">
-👥 Üyeler
+gY'¥ Üyeler
 </button>
 
 <button class="bc-menu-btn"
@@ -208,13 +226,13 @@ data-content="<p><b>Temel Çalışma İlkeleri</b></p>
     düzenlemek.</li><br>
 <li><b>Değerlendirme:</b> Projelerin başarısını, öğrencilerin bireysel ve sosyal gelişimlerine katkısını analiz etmek</li><br>
 ">
-⚙️ Çalışma Prensipleri
+âsTï¸ Çalışma Prensipleri
 </button>
 
 <button class="bc-menu-btn"
 data-title="Mevzuat"
 data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%C4%B0SYON%20USUL%20VE%20ESASLARI/SOSYAL_SORUMLULUK_PROJELER%C4%B0_VE_E.pdf">
-📜 Mevzuat
+gY"o Mevzuat
 </button>
 
 <!-- YENİ EKLENENLER -->
@@ -272,7 +290,7 @@ data-content='
 
 <div class="event-card">
         <a href="https://tip.bakircay.edu.tr/Duyurular/5821/bakircay-talks-kok-hucre-programlari-ve-norogelisimsel-bozukluklarin-hucresel-temelleri">
-<img class="event-img" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/Prof_Dr.%20%C3%96mer%20ali%20bayraktar.png">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/Prof_Dr.%20%C3%96mer%20ali%20bayraktar.png">
 <div class="event-body">
 <div class="event-title" style="color:blue">Bakırçay Talks: Kök Hücre Programları ve Nörogelişimsel Bozuklukların Hücresel Temelleri</div>
 <div class="event-date" style="color:blue">04 Haziran 2026</div>
@@ -283,7 +301,7 @@ data-content='
 </div>
 
 '>
-📅 Etkinlikler
+gY". Etkinlikler
 </button>
 
 
@@ -293,14 +311,15 @@ data-content="<h3>Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu Sekreteryas�
 <p>Tuğçe Yılmaz</p>
 <p><b>E-posta:</b> tugce.yilmaz@bakircay.edu.tr</p>
 <p><b>Telefon:</b> (0232) 493 00 00 / 11602</p>">
-📞 İletişim
+gY" İletişim
 </button>
 
 </div>
 
 <div class="bc-content">
 <div class="bc-content-header" id="contentTitle">Komisyon Hakkında</div>
-<iframe id="iframe" class="bc-iframe"></iframe>
+<div id="contentArea" class="bc-content-area"></div>
+<iframe id="iframe" class="bc-iframe" hidden></iframe>
 </div>
 
 </div>
@@ -309,11 +328,11 @@ data-content="<h3>Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu Sekreteryas�
 <script>
 const buttons = document.querySelectorAll(".bc-menu-btn");
 const iframe = document.getElementById("iframe");
+const contentArea = document.getElementById("contentArea");
 const title = document.getElementById("contentTitle");
 
 buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
@@ -321,23 +340,21 @@ buttons.forEach(btn => {
         const content = btn.getAttribute("data-content");
         const text = btn.getAttribute("data-title");
 
+        title.innerText = text;
+
         if (content) {
-            const html = `
-            <html>
-            <head>
-                <meta charset="UTF-8">
-                <style>
-                    body { font-family: Inter; padding: 40px; }
-                </style>
-            </head>
-            <body>${content}</body>
-            </html>`;
-            iframe.src = "data:text/html;charset=utf-8," + encodeURIComponent(html);
-        } else {
+            iframe.hidden = true;
+            iframe.removeAttribute("src");
+            iframe.removeAttribute("srcdoc");
+            contentArea.hidden = false;
+            contentArea.innerHTML = content;
+        } else if (url) {
+            contentArea.hidden = true;
+            contentArea.innerHTML = "";
+            iframe.hidden = false;
+            iframe.removeAttribute("srcdoc");
             iframe.src = url;
         }
-
-        title.innerText = text;
     });
 });
 
@@ -346,3 +363,4 @@ document.querySelector(".bc-menu-btn.active").click();
 
 </body>
 </html>
+
