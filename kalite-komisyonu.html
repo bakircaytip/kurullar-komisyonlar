@@ -157,6 +157,53 @@
     display: none;
 }
 </style>
+<style id="mobile-layout">
+/* Mobil ve tablet ekran uyumu */
+html { -webkit-text-size-adjust: 100%; }
+.bc-panel { width: calc(100% - 32px); }
+.bc-header-content { gap: 20px; }
+.bc-title { min-width: 0; overflow-wrap: anywhere; line-height: 1.4; }
+.bc-header-right { flex-shrink: 0; }
+.bc-home-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+.bc-sidebar { flex: 0 0 300px; }
+.bc-content, .bc-content-area { min-width: 0; }
+.bc-content-area { overflow-wrap: anywhere; }
+.bc-content-area img, .bc-content-area video { max-width: 100%; height: auto; }
+.bc-content-area .event-card { min-width: 0; }
+.bc-content-area ul, .bc-content-area ol { padding-left: 1.4em; }
+.bc-content-area li { list-style-position: inside; }
+.bc-content-area ul li, .bc-content-area ol li { list-style-position: outside; }
+.bc-menu-btn { min-height: 48px; line-height: 1.5; overflow-wrap: anywhere; }
+.bc-menu-btn:focus-visible, .bc-home-btn:focus-visible { outline: 3px solid #fbbf24; outline-offset: -3px; }
+.bc-iframe { min-height: 600px; }
+@media (max-width: 1024px) {
+    .bc-sidebar { flex-basis: 240px; width: 240px; }
+    .bc-content-area { padding: 24px; }
+}
+@media (max-width: 768px) {
+    .bc-panel { width: calc(100% - 24px); margin: 12px auto; border-radius: 12px; }
+    .bc-header { padding: 18px 16px; }
+    .bc-header-content { flex-direction: column; align-items: stretch; gap: 14px; }
+    .bc-title { font-size: 1.1rem; }
+    .bc-header-right { width: 100%; justify-content: space-between; gap: 12px; }
+    .bc-logo { height: 50px; width: auto; max-width: 45%; object-fit: contain; }
+    .bc-body { flex-direction: column; min-height: 0; }
+    .bc-sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; flex: none; }
+    .bc-menu-btn { width: 100%; padding: 12px; font-size: .875rem; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .bc-content { width: 100%; }
+    .bc-content-header { padding: 16px; overflow-wrap: anywhere; line-height: 1.5; }
+    .bc-content-area { padding: 20px 16px; font-size: 1rem; overflow-x: auto; }
+    .bc-content-area p { text-align: left !important; }
+    .bc-content-area h2 { font-size: 1.3rem; }
+    .bc-content-area h3 { font-size: 1.125rem; }
+    .bc-content-area .event-container { grid-template-columns: 1fr; }
+    .bc-iframe { flex: none; height: 75vh; height: 75svh; min-height: 420px; }
+}
+@media (max-width: 360px) {
+    .bc-panel { width: calc(100% - 16px); margin: 8px auto; }
+    .bc-menu-btn { padding: 10px 8px; font-size: .8125rem; }
+}
+</style>
 </head>
 
 <body>
