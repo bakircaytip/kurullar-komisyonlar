@@ -306,9 +306,8 @@ data-url="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/KOM%
 📜 Mevzuat
 </button>
 
-<!-- YENİ EKLENENLER -->
 
-<!-- ETKİNLİKLER -->
+<!--***************************************************************** ETKİNLİKLER *******************************************************************************-->
 
 <button class="bc-menu-btn"
 data-title="Etkinlikler"
@@ -317,8 +316,17 @@ data-content='
 <style>
 .event-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .event-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .event-container { grid-template-columns: 1fr; }
 }
 
 .event-card {
@@ -327,6 +335,14 @@ data-content='
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     transition: 0.3s;
+    height: 100%;
+}
+
+.event-card a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 .event-card:hover {
@@ -335,7 +351,7 @@ data-content='
 
 .event-img {
     width: 100%;
-    height: 170px;
+    height: 230px;
     object-fit: cover;
 }
 
@@ -344,14 +360,22 @@ data-content='
 }
 
 .event-title {
-    font-weight: 600;
-    color: #025860;
+    font-weight: 300;
+    color: blue;
+    font-family: "Helvetica", sans-serif;
 }
 
 .event-date {
     font-size: 0.85em;
-    color: #00a5b5;
+    font-weight: 700;
+    color: blue;
     margin: 6px 0;
+    font-family: "Helvetica", sans-serif;
+}
+.text {
+    font-weight: 300;
+    color:gray;
+    font-family: "Helvetica", sans-serif;
 }
 </style>
 
@@ -359,14 +383,52 @@ data-content='
 
 <div class="event-container">
 
+<!-- Etkinlik 4 -->
 <div class="event-card">
-        <a href="https://tip.bakircay.edu.tr/Duyurular/5821/bakircay-talks-kok-hucre-programlari-ve-norogelisimsel-bozukluklarin-hucresel-temelleri">
-<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/Yuklenenler/TIP%20FAK%C3%9CLTES%C4%B0/Prof_Dr.%20%C3%96mer%20ali%20bayraktar.png">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=activity&detail=185" target="_blank" rel="noopener noreferrer">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/185/whatsapp_image_2026-09-26_at_12.19.07.jpeg">
 <div class="event-body">
-<div class="event-title" style="color:blue">Bakırçay Talks: Kök Hücre Programları ve Nörogelişimsel Bozuklukların Hücresel Temelleri</div>
-<div class="event-date" style="color:blue">04 Haziran 2026</div>
-<div style="color:blue"></div></a>
+<div class="event-title">Beyaz Önlük Giyme Törenimiz…</div>
+<div class="event-date">23 Eylül 2026</div>
+<div class="text">2026–2027 Eğitim-Öğretim Yılı Beyaz Önlük Giyme Törenimizi, öğrencilerimizin ve ailelerinin büyük heyecanına ortak...</div>
 </div>
+</a>
+</div>
+
+<!-- Etkinlik 3 -->
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=news&detail=1422" target="_blank" rel="noopener noreferrer">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/199/logo_b.png">
+<div class="event-body">
+<div class="event-title">Sosyal Sorumluluk Projeleri ve Etkinlik Komisyonu İlk Toplantısını Gerçekleştirdi</div>
+<div class="event-date">18 Eylül 2026</div>
+<div class="text">Komisyon Başkanı Prof. Dr. Özgür Olukman başkanlığında, Dönem I Koordinatörü Dr. Öğr. Üyesi Levent ELMAS’ın da katılımıyla gerçekleştirilen toplantıda, 2026–2027 eğitim-öğretim yılına ait faaliyet planı raporu...</div>
+</div>
+</a>
+</div>
+
+<!-- Etkinlik 2 -->
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=1&detailType=news&detail=1422" target="_blank" rel="noopener noreferrer">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/haber/1422/cnz3.jpeg">
+<div class="event-body">
+<div class="event-title">Anatomi Anabilim Dalı tarafından, bedenini tıp eğitimine bağışlayan Demet Karakaş için Teşekkür ve Anma Töreni düzenlendi</div>
+<div class="event-date">23 Eylül 2026</div>
+<div class="text">Bedenini tıp eğitimine bağışlayarak geleceğin hekimlerinin yetişmesine paha biçilemez bir katkı sunan Demet Karakaş için...</div>
+</div>
+</a>
+</div>
+
+<!-- Etkinlik 1 -->
+<div class="event-card">
+        <a href="https://tip.bakircay.edu.tr/?department=2&page=newsAndActivity&count=5&detailType=activity&detail=156" target="_blank" rel="noopener noreferrer">
+<img class="event-img" referrerpolicy="no-referrer" loading="lazy" decoding="async" src="https://tip.bakircay.edu.tr/upload/etkinlik/156/bakircay_talks.jpeg">
+<div class="event-body">
+<div class="event-title">Bakırçay Talks: Kök Hücre Programları ve Nörogelişimsel Bozuklukların Hücresel Temelleri</div>
+<div class="event-date">04 Haziran 2026</div>
+<div class="text">İzmir Bakırçay Üniversitesi 10. Yıl Bilim Etkinlikleri kapsamında, Kariyer ve Yetenek Uygulama ve Araştırma Merkezi...</div>
+</div>
+</a>
 </div>
 
 </div>
@@ -374,7 +436,7 @@ data-content='
 '>
 📅 Etkinlikler
 </button>
-
+<!-- ******************************************************************************************************************************************************************** -->
 
 <button class="bc-menu-btn"
 data-title="İletişim"
